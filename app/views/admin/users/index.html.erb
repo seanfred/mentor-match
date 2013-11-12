@@ -1,0 +1,197 @@
+<%= link_to "Approve Users", pending_users_path, class: "button alert small" %>
+<%= link_to "Notifications", notifications_path, class: "button alert small" %>
+<%= link_to "Pair!", "/pair", class: "button alert small" %>
+<div class="section-container accordion" data-section="accordion">
+	<section class="active">
+	<p class="title" data-section-title><a href="#panel1">&#9660; Students that still need mentors</a></p>
+		<div class="content" data-section-content>
+
+		<% if @studentnomentors.blank? %>
+			<p>Hurray! All Students are Matched</p>
+		<% else %>
+			<table width="100%">
+				<tr>
+					<td>Student Name</td>
+					<td>Class</td>
+					<td>Rankings</td>
+				</tr>
+				<% @studentnomentors.each do |student| %>
+					<tr>
+						<td>
+							<%= link_to "#{student.personal_first_name} #{student.personal_last_name}", student_path(student) %></td>
+						<td>
+							<%= case student.cf_class
+										when "rails2"
+											"Ruby on Rails June 2013"
+										when "rails3"
+											"Ruby on Rails July/August 2013"
+									end %>
+							</td>
+							<td>
+								<% if student.studentrankings.present? %>
+									<ol class="rankOrder">
+										<% student.studentrankings.order(:rank).each do |ranking| %>
+												<li>
+													<%= ranking.mentor.personal_first_name %>
+													<%= ranking.mentor.personal_last_name %>
+												</li>
+										<% end %>
+									</ol>
+								<% else %>
+									-
+								<% end %>
+							</td>
+					</tr>
+				<% end %>
+				<tr>
+					<td colspan="2">
+						<%= paginate @studentnomentors %>
+					</td>
+				</tr>
+			</table>
+		<% end %>
+		</div>
+</section>
+<section class="active">
+	<p class="title" data-section-title><a href="#panel2">&#9660; Mentors that still need mentees</a></p>
+	<div class="content" data-section-content>
+	<% if @mentornostudents.blank? %>
+		<p>Hurray!  All Mentors are Matched!</p>
+	<% else %>
+		<table width="100%">
+			<tr>
+				<td>Mentor Name</td>
+				<td>Company</td>
+				<td>Rankings</td>
+			</tr>
+			<% @mentornostudents.each do |mentor| %>
+				<tr>
+					<td>
+						<%= link_to "#{mentor.personal_first_name} #{mentor.personal_last_name}", mentor_path(mentor) %>
+					</td>
+					<td>
+						<%= mentor.career_company_private %>
+					</td>
+					<td>
+						<% if mentor.rankings.present? %>
+							<ol class="rankOrder">
+								<% mentor.rankings.order(:rank).each do |ranking| %>
+										<li>
+											<%= ranking.student.personal_first_name %>
+											<%= ranking.student.personal_last_name %>
+										</li>
+								<% end %>
+							</ol>
+						<% else %>
+							-
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+			<tr>
+				<td colspan="2">
+					<%= paginate @mentornostudents %>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+</div>
+</section>
+</div>
+<div class="section-container accordion" data-section="accordion">
+<section>
+	<p class="title" data-section-title>
+		<a href="#panel1">&#9660; All Student Profiles</a>
+	</p>
+	<div class="content" data-section-content>
+	<% if @studentsall.blank? %>
+		<p>No Questionnaires Finished</p>
+	<% else %>
+		<table width="100%">
+			<tr>
+				<td>Name</td>
+				<td>Mentor</td>
+				<td>Questionnaire</td>
+			</tr>
+			<% @studentsall.each do |student| %>
+				<tr>
+					<td>
+						<%= "#{student.personal_first_name} #{student.personal_last_name}" %></td>
+					<td>
+						<%= student.mentor.try(:personal_first_name) %> <%= student.mentor.try(:personal_last_name) %>
+						<%= '-' if student.mentor.blank? %></td>
+					<td>
+						<%= link_to "View", student_path(student) %> /
+						<%= link_to "Edit", edit_student_path(student) %> /
+						<%= link_to "Delete", student,
+							:confirm => "Are you sure you want to delete #{student.personal_first_name} #{student.personal_last_name}",
+							:method => :delete %></td>
+				</tr>
+			<% end %>
+			<tr>
+				<td colspan="3">
+					<%= paginate @studentsall %>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+	</div>
+</section>
+<section>
+	<p class="title" data-section-title>
+		<a href="#panel2">&#9660; All Mentor Profiles</a>
+	</p>
+	<div class="content" data-section-content>
+			<% if @mentorsall.blank? %>
+				<p>No Mentor Profiles</p>
+				</table>
+			<% else %>
+				<table width="100%">
+					<tr>
+						<td>Name</td>
+						<td>Mentee(s)</td>
+						<td>Profiles</td>
+						<td>Rankings</td>
+					</tr>
+					<% @mentorsall.each do |mentor| %>
+						<tr>
+							<td>
+								<%= "#{mentor.personal_first_name} #{mentor.personal_last_name}" %></td>
+							<td>
+									<% mentor.students.each do |student| %>
+										<%= student.personal_first_name + ' ' + student.personal_last_name %><br />
+									<% end %>
+									<%= "-" if mentor.students.blank? %></td>
+							<td>
+								<%= link_to "View", mentor_path(mentor) %> /
+								<%= link_to "Edit", edit_mentor_path(mentor) %> /
+								<%= link_to "Delete", mentor,
+									:confirm => "Are you sure you want to delete #{mentor.personal_first_name} #{mentor.personal_last_name}",
+									:method => :delete %></td>
+							<td>
+								<% if mentor.rankings.present? %>
+									<ol class="rankOrder">
+										<% mentor.rankings.order(:rank).each do |ranking| %>
+												<li>
+													<%= ranking.student.personal_first_name %>
+													<%= ranking.student.personal_last_name %>
+												</li>
+										<% end %>
+									</ol>
+								<% else %>
+									-
+								<% end %>
+							</td>
+						</tr>
+					<% end %>
+					<tr>
+						<td>
+							<%= paginate @mentorsall %>
+						</td>
+					</tr>
+				</table>
+			<% end %>
+	</div>
+</section>
+</div>
+

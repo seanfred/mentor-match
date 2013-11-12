@@ -1,0 +1,91 @@
+<% if @students.present? %>
+	<%= form_tag "/paired", method: "put" do %>
+		<table width="100%">
+			<tr>
+				<td>Students</td>
+				<td>Mentors</td>
+				<td>Class</td>
+			</tr>
+			<% @students.each do |student| %>
+				<tr>
+					<td>
+						<%= link_to "#{student.personal_first_name} #{student.personal_last_name}", student_path(student) %></td>
+					<td>
+						<% mentors = Mentor.joins(:user).where("approval = 1 AND cf_class = ?", student.cf_class) %>
+						<% mentors_array = mentors.map{|mentor|
+								["#{mentor.personal_first_name} #{mentor.personal_last_name}", "#{mentor.id}-#{student.id}"]}
+
+							mentors_array.unshift(["Please, select a mentor", "remove-#{student.id}"]) %>
+						<% if student.mentor.presence
+								mentorid = "#{student.mentor.id}-#{student.id}"
+							end %>
+						<%= select_tag :mentor_id,
+									options_for_select(mentors_array, (mentorid if !mentorid.nil?)),
+									{id: "mentor_#{student.id}", name: "mentor_ids[]"} %>
+					</td>
+					<td>
+						<%= case student.cf_class
+									when "rails2"
+										"Ruby on Rails June 2013"
+									when "rails3"
+										"Ruby on Rails July/August 2013"
+								end %>
+					</td>
+				</tr>
+			<% end %>
+			<tr>
+				<td colspan="3">
+					<%= paginate @students %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<%= submit_tag "Pair", class: "button alert round small" %>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+<% else %>
+	<p>There are currently no students from this class.</p>
+<% end %>
+<h2>Mentors that still need Mentees</h2>
+<% if @mentornostudents.present? %>
+	<table width="100%">
+			<tr>
+				<td>Mentor Name</td>
+				<td>Company</td>
+				<td>Rankings</td>
+			</tr>
+			<% @mentornostudents.each do |mentor| %>
+				<tr>
+					<td>
+						<%= link_to "#{mentor.personal_first_name} #{mentor.personal_last_name}", mentor_path(mentor) %>
+					</td>
+					<td>
+						<%= mentor.career_company_private %>
+					</td>
+					<td>
+						<% if mentor.rankings.present? %>
+							<ol class="rankOrder">
+								<% mentor.rankings.order(:rank).each do |ranking| %>
+										<li>
+											<%= ranking.student.personal_first_name %>
+											<%= ranking.student.personal_last_name %>
+										</li>
+								<% end %>
+							</ol>
+						<% else %>
+							-
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+		<tr>
+			<td>
+				<%= paginate @mentornostudents %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+	<p>None—All mentors have been paired</p>
+<% end %>

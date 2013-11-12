@@ -1,0 +1,633 @@
+
+<% @tableWidth ||= "665px" %>
+<!-- Hides first name and last name from mentors -->
+	<h2>
+		<% if current_user.admin? || current_user.student == @student || current_user.mentor.students.include?(@student) %>
+			<%= @student.personal_first_name %>
+			<%= @student.personal_last_name %>
+		<% else %>
+			Student #<%= @student.id %>
+		<% end %>
+	</h2>
+		<div class="left">
+		<% if current_user.admin? || current_user.student == @student || current_user.mentor.students.include?(@student) %>
+			<%= mail_to "#{@student.user.email}", @student.user.email %><br />
+		<% end %>
+			<%= case @student.cf_class
+					when "rails2"
+						"Ruby on Rails - May/June 2013"
+					when "rails3"
+						"Ruby on Rails - July/August 2013"
+					end %>
+				<%  if @student.cf_class %><br /><% end %>
+	<%= "<br />From #{@student.personal_where_you_from}<br />" if @student.personal_where_you_from.presence %>
+	<a href="#experience" class="anchors">Experience</a> 	|
+	<a href="#skills" class="anchors">Skills</a>						|
+	<a href="#preferences" class="anchors">Preferences</a> 	|
+	<a href="#goals" class="anchors">Goals</a>
+</div>
+<div class="right">
+	<% if current_user.admin || @student.id == current_user.student.try(:id)  %>
+	<%= link_to "Edit", edit_student_path(@student), class: "button alert small round" %>
+	<%= link_to "Delete", @student,
+			:confirm => "Are you sure you want to delete #{@student.personal_first_name} #{@student.personal_last_name}",
+			:method => :delete, class: "button alert small round" %>
+	<% end %>
+	<% if current_user.mentor %>
+		<% if current_user.mentor.rankings.where(student_id: @student.id).present? %>
+			<p class= "rankingsParagraph">
+				This student is currently in your rankings.
+			</p>
+		<% else %>
+			<%= link_to "+ Add to Ranking", new_student_ranking_path(@student),
+			:confirm => "Are you sure you want to add #{@student.personal_first_name} #{@student.personal_last_name} to your rankings?", remote: true, class: "button round alert small" %>
+		<% end %>
+	<% end %>
+</div>
+	<table class="clear" width="<%= @tableWidth %>">
+		<tr>
+			<td colspan="2"><h4 id ="experience">Experience</h4></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Did you attend a university?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= yes_format(@student.experience_university) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What degree did you receive?
+				</h5>
+			</td>
+		</tr>
+			<td colspan="2">
+				<%=	empty_answer(@student.experience_degree)%>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Any other degree or college experience?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.experience_other_degree.presence  ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What is your current job/role?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.experience_job )  %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Why are you attending Code Fellows?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.experience_why_codefellows )  %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					A project you are proud of:
+				</h5>
+				<em>
+					- What was the project<br>
+					- How was it challenging<br>
+					- What made you proud of it<br>
+					- What did you learn from it<br>
+				</em>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.experience_project  ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h4 id="skills">Skills</h4></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					How would you classify your developer skills?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= skill_format(@student.skills_developer) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					How familiar are you with Object Oriented Programming?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= skill_format(@student.skills_object) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What is your experience with the following languages/frameworks?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								HTML/CSS/XML
+							</h5>
+						</td>
+						<td>
+							<%= skill_format(@student.skills_html_css) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Javascript
+							</h5>
+						</td>
+						<td>
+							<%= skill_format(@student.skills_javascript) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Java
+							</h5>
+						</td>
+						<td>
+							<%= skill_format(@student.skills_java)  %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								C++
+							</h5>
+						</td>
+						<td>
+							<%= skill_format(@student.skills_cplusplus)  %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								C
+							</h5>
+						</td>
+						<td>
+							<%= skill_format(@student.skills_c) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Ruby
+							</h5>
+						</td>
+						<td><%= skill_format(@student.skills_ruby) %></td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Python
+							</h5>
+						</td>
+						<td><%= skill_format(@student.skills_python) %></td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								PHP
+							</h5>
+						</td>
+						<td><%= skill_format(@student.skills_php) %></td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								.NET
+							</h5>
+						</td>
+						<td><%= skill_format(@student.skills_net) %></td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Coffeescript
+							</h5>
+						</td>
+						<td><%= skill_format(@student.skills_coffeescript) %></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Other Coding Skills
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.skills_other_coding ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Are you comfortable with "selling yourself" or your idea?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= yes_format(@student.skills_selling_yourself) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">How familiar are you with the development process (design, dev, test, deploy)?</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= case @student.skills_development_familiarity
+						when 3
+							"Very Familiar"
+						when 2
+							"Somewhat Familiar"
+						when 1
+							"Not Familiar"
+						end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Have you used agile development or a different development process?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= yes_format(@student.skills_agile_development_experience) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Are you self-taught(books, tutorials, short classes)?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= yes_format(@student.learning_self_taught) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Do you learn better by reading a book or being in a class?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= @student.learning == "books" ? "Books" : "Classes" %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Do you like working in groups or on your own?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= @student.learning_preference == "groups" ? "Groups" : "On My Own" %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Please add anything else that you feel would help match you with a mentor
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.learning_extra_information ) %></td>
+		</tr>
+		<tr>
+			<td colspan="2"><h4 id="preferences">Mentor Preferences</h4></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Seeking in a Mentor
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Career Advice
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_career_advice ) %>
+						</td>
+					</tr>
+						<td>
+							<h5 class="subheader">
+								Developer Skill Development
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_skill_development ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Assistance with Coding Question/tactics
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_coding_question_tactics ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Soft Skills(presentation, leading teams, etc.)
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_soft_skills ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Interview coaching
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_interview_coaching ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Job Search
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_job_search ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Resume Development
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_resume_development ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								GitHub Account Development
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_github_account_development ) %>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h5 class="subheader">
+								Assistance with Selling yourself or an idea
+							</h5>
+						</td>
+						<td>
+							<%= empty_answer(@student.mentor_selling_idea ) %>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h5 class="subheader">
+					Are you seeking a mentor that is working at a:
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td><%= case @student.mentor_company_type
+							 when "startup"
+							 	"Startup"
+							 when "largeco"
+							 	"Larger Company"
+							 when "self"
+							 	"Self Employed"
+							 else
+							 	"No Preference"
+							 end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Do you prefer a:
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= case @student.mentor_gender
+							when "m"
+								"Male"
+							when "f"
+								"Female"
+							else
+							 "No Preference"
+							end %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Feel free to add anything else here:
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.mentor_extra_info ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h4 id="goals">Goals</h4></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Do you want to work at a:
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= case @student.goals_company_type
+							 when "startup"
+							 	"Startup"
+							 when "largeco"
+							 	"Larger Company"
+							 when "self"
+							 	"Self Employed"
+							 else
+							 	"No Preference"
+							 end %></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					After you leave Code Fellows, you'd like to:
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goals_after_codefellows ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What is your dream job title immediately following CodeFellows?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goals_dream_job_title ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What companies are you most interested in working for?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goals_companies ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					What do you want to do in the next year?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goals_next_year ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Where do you want to be in the next four years?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goal_next_4_years ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Do you intend to stay in Seattle after the class completes?
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= @student.goals_stay_seattle == "y" ? "Yes" : "No" %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Please add your LinkedIn account or Resume
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.linked_in ) %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h5 class="subheader">
+					Please add any other details or information about yourself you feel would be useful to a mentor
+				</h5>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<%= empty_answer(@student.goals_extra_info ) %>
+			</td>
+		</tr>
+	</table>

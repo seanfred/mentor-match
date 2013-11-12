@@ -1,0 +1,8 @@
+<li>
+  <% mentor = if @user.mentor == @mentor
+                "#{@mentor.personal_first_name.capitalize} #{@mentor.personal_last_name.capitalize}"
+              else
+                "Mentor ##{@mentor.id}"
+              end %>
+  <%= link_to mentor, mentor_path(@mentor), class: "mentors", remote: true %>
+</li>

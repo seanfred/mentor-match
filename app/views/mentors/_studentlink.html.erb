@@ -1,0 +1,8 @@
+<li>
+  <% student =  if @user.students.include?(@student)
+                  "#{@student.personal_first_name.capitalize} #{@student.personal_last_name.capitalize}"
+                else
+                  "Student ##{@student.id}"
+                end %>
+  <%= link_to student, student_path(@student), class: "students", remote: true %>
+</li>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag %>
+  	<title><%= content_for?(:title) ? yield(:title) : "CodeFellows Mentor Match" %></title>
+
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+<!-- Begin Page Header -->
+<div id="wrap">
+  <nav class="top-bar">
+    <header class="row">
+      <div class="large-8 columns">
+          <img src="/assets/codefellows2.png" height="auto" width="45" />
+          <h1 id="headerTitle"> Mentor Match </h1>
+      </div>
+      <div class="large-4 columns right">
+        <% if user_signed_in? %>
+          <% if current_user.student || current_user.mentor %>
+            <% @user = current_user.student || current_user.mentor %>
+            <span class="welcomeText">
+              Welcome
+              <%= @user.personal_first_name.capitalize %> <%= @user.personal_last_name.capitalize %>!
+            </span>
+          <% end %>
+          <div id="settingsDiv" class: "right">
+            <%= link_to image_tag("/assets/admin-large.png", :alt => "Settings", :title => "Settings", :id => "settings", width: "30px", height: "auto", class: "settingsImage"), "#", id: "profileDropDown" %>
+            <div id="DropDown">
+                <% dashboard =  if current_user.student
+                                  students_path
+                                elsif current_user.mentor
+                                  mentors_path
+                                elsif current_user.admin
+                                  admin_users_path
+                                end %>
+                <%= link_to "Dashboard", dashboard, class: "profileLinks" %>
+                <% if current_user.mentor %>
+                  <%= link_to "Edit Your Profile", edit_mentor_path(@user), class: "profileLinks", remote: true %>
+                  <%= link_to "Delete Your Profile", mentor_path(@user),
+                            :confirm => "Are you sure you want to delete your profile?",
+                            :method => :delete, class: "profileLinks" %>
+                <% elsif current_user.student %>
+                  <%= link_to "Edit Your Profile", edit_student_path(@user), class: "profileLinks", remote: true  %>
+                  <%= link_to "Delete Your Profile", student_path(@user),
+                            :confirm => "Are you sure you want to delete your profile?",
+                            :method => :delete, class: "profileLinks" %>
+                <% end %>
+              <%= link_to "Edit Account", edit_user_registration_path(current_user), class: "profileLinks" %>
+              <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "profileLinks" %>
+            </div>
+          </div>
+        <% else %>
+          <div class="right">
+            <%= link_to image_tag("/assets/admin-large.png", :alt => "admin login", :title => "Login", :id => "login", width: "30px", height: "auto", class: "settingsImage"), new_user_session_path, "data-reveal-id" => "myModal" %>
+          </div>
+      <% end %>
+      </div>
+    </header>
+  </nav>
+<!-- End Page Header -->
+
+<!-- Begin Page Content -->
+  <div class="row" id="wrapper">
+    <div class="large-12 small-12">
+      <% flash.each do |key, value| %>
+        <div class='flash' id='<%= key %>'>
+          <div id="closeNotice">
+            x
+          </div>
+          <%= value %>
+        </div>
+
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </div>
+  <div id="push"></div>
+</div>
+<!-- End Page Content -->
+
+<!-- Begin Page Footer -->
+<center>
+<footer class="row">
+  <div class="large-12 small-12 columns">
+    <h6 class="subheader">&copy; CodeFellows 2013</h6>
+  </div>
+</footer>
+</center>
+    <div id="myModal" class="reveal-modal small">
+        <%= render "devise/sessions/form" %>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <%= javascript_include_tag "application" %>
+<!-- End Page Footer -->
+  </body>
+</html>

@@ -1,0 +1,236 @@
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "mentors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "personal_first_name" varchar(255), "personal_last_name" varchar(255), "personal_why_mentor" varchar(255), "personal_knowledge_impart" varchar(255), "career_information" varchar(255), "career_job_title" varchar(255), "career_company_private" varchar(255), "career_company_type" varchar(255), "experience_university" varchar(255), "experience_degree" varchar(255), "experience_other_degree" varchar(255), "experience_job" varchar(255), "experience_project" varchar(255), "mentee_skills_developer" integer, "mentee_skills_html_css" integer, "mentee_skills_javascript" integer, "mentee_skills_java" integer, "mentee_skills_cplusplus" integer, "mentee_skills_c" integer, "mentee_skills_ruby" integer, "mentee_skills_python" integer, "mentee_skills_php" integer, "mentee_skills_net" integer, "mentee_skills_coffeescript" integer, "mentee_skills_object" integer, "mentee_skills_other_coding" varchar(255), "mentee_gender" varchar(255), "skills_career_advice" integer, "skills_development" integer, "skills_coding_question_tactics" integer, "skills_soft_skills" integer, "skills_interview_coaching" integer, "skills_job_search" integer, "skills_resume_development" integer, "skills_github_account_development" integer, "skills_selling_idea" integer, "mentee_extra_info" varchar(255), "cf_class" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) 
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "notifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "message" varchar(255), "receiver_type" varchar(255), "receiver_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "rankings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "student_id" integer, "rank" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "studentrankings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "student_id" integer, "rank" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "notify" boolean DEFAULT 'f', "cf_class" varchar(255), "personal_first_name" varchar(255), "personal_last_name" varchar(255), "personal_where_you_from" varchar(255), "experience_university" varchar(255), "experience_degree" varchar(255), "experience_other_degree" varchar(255), "experience_job" varchar(255), "experience_why_codefellows" varchar(255), "experience_project" varchar(255), "skills_developer" integer, "skills_object" integer, "skills_html_css" integer, "skills_javascript" integer, "skills_java" integer, "skills_cplusplus" integer, "skills_c" integer, "skills_ruby" integer, "skills_python" integer, "skills_php" integer, "skills_net" integer, "skills_coffeescript" integer, "skills_other_coding" varchar(255), "skills_selling_yourself" integer, "skills_development_familiarity" integer, "skills_agile_development_experience" integer, "learning_self_taught" varchar(255), "learning" varchar(255), "learning_preference" varchar(255), "learning_extra_information" varchar(255), "mentor_career_advice" integer, "mentor_skill_development" integer, "mentor_coding_question_tactics" integer, "mentor_soft_skills" integer, "mentor_interview_coaching" integer, "mentor_job_search" integer, "mentor_resume_development" integer, "mentor_github_account_development" integer, "mentor_selling_idea" integer, "mentor_company_type" varchar(255), "mentor_gender" varchar(255), "mentor_extra_info" varchar(255), "goals_company_type" varchar(255), "goals_after_codefellows" varchar(255), "goals_dream_job_title" varchar(255), "goals_companies" varchar(255), "goals_next_year" varchar(255), "goal_next_4_years" varchar(255), "goals_stay_seattle" varchar(255), "linked_in" varchar(255), "goals_extra_info" varchar(255), "mentor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) 
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "admin" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "approval" integer DEFAULT 0, "role" varchar(255)) [0m
+  [1m[35m (2.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (3.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130627045611')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130520195429')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130521194119')[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130523160434')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130528174557')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130610161750')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130610220856')[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130612160705')
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-12 14:07:57 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/_form.html.erb (91.6ms)
+  Rendered home/index.html.erb within layouts/application (98.9ms)
+Compiled foundation.css  (2461ms)  (pid 24593)
+Compiled foundation_and_overrides.css  (1123ms)  (pid 24593)
+Compiled admin/users.css  (4ms)  (pid 24593)
+Compiled home.css  (6ms)  (pid 24593)
+Compiled mentors.css  (26ms)  (pid 24593)
+Compiled notifications.css  (2ms)  (pid 24593)
+Compiled rankings.css  (1ms)  (pid 24593)
+Compiled sessions.css  (1ms)  (pid 24593)
+Compiled students.css  (25ms)  (pid 24593)
+Compiled application.css  (3740ms)  (pid 24593)
+Compiled vendor/custom.modernizr.js  (0ms)  (pid 24593)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (23.4ms)
+Compiled jquery.js  (3ms)  (pid 24593)
+Compiled jquery_ujs.js  (0ms)  (pid 24593)
+Compiled list.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.alerts.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.clearing.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.cookie.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.dropdown.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.forms.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.joyride.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.magellan.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.orbit.js  (5ms)  (pid 24593)
+Compiled foundation/foundation.placeholder.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.reveal.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.section.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.tooltips.js  (0ms)  (pid 24593)
+Compiled foundation/foundation.topbar.js  (0ms)  (pid 24593)
+Compiled foundation/index.js  (133ms)  (pid 24593)
+Compiled admin/users.js  (212ms)  (pid 24593)
+Compiled home.js  (173ms)  (pid 24593)
+Compiled jquery-ui.js  (63ms)  (pid 24593)
+Compiled mentors.js  (192ms)  (pid 24593)
+Compiled notifications.js  (140ms)  (pid 24593)
+Compiled ranking.js  (139ms)  (pid 24593)
+Compiled sessions.js  (138ms)  (pid 24593)
+Compiled students.js  (187ms)  (pid 24593)
+Compiled application.js  (1531ms)  (pid 24593)
+Completed 200 OK in 5648ms (Views: 5607.5ms | ActiveRecord: 39.5ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /notifications.css - 200 OK (3ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /mentors.css - 200 OK (1ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /rankings.css - 200 OK (1ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /admin/users.css - 200 OK (2ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /foundation.css - 200 OK (48ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /foundation_and_overrides.css - 200 OK (8ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:03 -0800
+Served asset /students.css - 200 OK (26ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /application.css - 200 OK (30ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /home.css - 200 OK (2ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.alerts.js - 200 OK (4ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.clearing.js - 200 OK (4ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /vendor/custom.modernizr.js - 200 OK (19ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.js - 200 OK (3ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.cookie.js - 200 OK (3ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.dropdown.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /list.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.forms.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /admin-large.png - 200 OK (53ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /codefellows2.png - 200 OK (8ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.magellan.js - 200 OK (9ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.joyride.js - 200 OK (6ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.placeholder.js - 200 OK (2ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.reveal.js - 200 OK (3ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.orbit.js - 200 OK (36ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.topbar.js - 200 OK (2ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/index.js - 200 OK (34ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.tooltips.js - 200 OK (2ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /notifications.js - 200 OK (1ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /ranking.js - 200 OK (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /home.js - 200 OK (1ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /mentors.js - 200 OK (2ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /foundation/foundation.section.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /admin/users.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /jquery-ui.js - 200 OK (78ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /sessions.js - 200 OK (2ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-12 14:08:04 -0800
+Served asset /students.js - 200 OK (2ms)

@@ -1,0 +1,6 @@
+<h2>Send a Notification</h2>
+<% if Mentor.all.present? || Student.all.present? %>
+  <%= render "form" %>
+<% else %>
+  <p>You have no one you can send notifications</p>
+<% end %>

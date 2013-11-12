@@ -1,0 +1,29 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* We use these to style paragraphs */
+
+.rolesnojs{
+}
+.roleswithjs{
+  display: none;
+  position: "static";
+}
+.clear{
+  clear: both;
+}
+#intro{
+  width: 335px;
+  margin-left: 5px;
+  padding: 0 10px 0 10px;
+  text-align: justify;
+  float: left;
+}
+#introOl{
+  margin-left:  40px;
+}
+#introImage{
+  width: 300px;
+  float: left;
+}

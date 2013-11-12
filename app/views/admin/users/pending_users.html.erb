@@ -1,0 +1,53 @@
+<h2>Users That Need Approval</h2>
+<% if @pending_users.present? %>
+	<%= form_tag "/approve", method: "put" do |f| %>
+		<table width="100%">
+			<tr>
+				<td width="50px">Approve</td>
+				<td width="50px">Deny</td>
+				<td></td>
+			</tr>
+			<% @pending_users.each do |user| %>
+				<tr>
+					<td>
+						<%= check_box_tag "approve_ids[]",
+							user.id,
+							checked = false %>
+					</td>
+					<td>
+						<%= check_box_tag "deny_ids[]",
+							user.id,
+							checked = false %>
+					</td>
+					<td>
+						<% case user.role %>
+						<% when "mentor" %>
+							<%= user.mentor.try(:personal_first_name) %>
+							<%= user.mentor.try(:personal_last_name) %>
+						<% when "student" %>
+							<%= user.student.try(:personal_first_name) %>
+							<%= user.student.try(:personal_last_name) %>
+						<% end %>
+						<% if user.email.present? %>
+							(<%= user.email %>)
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+			<tr>
+				<td>
+					<%= paginate @pending_users %>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<%= submit_tag "Submit" %>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+<% else %>
+	<p>
+		No current users available.
+	</p>
+<% end %>

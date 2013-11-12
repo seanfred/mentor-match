@@ -1,0 +1,12 @@
+<% @studentrankings = current_user.student.studentrankings.order(:rank) %>
+<% if @studentrankings.present? %>
+  <ol id="studentranks">
+    <% @studentrankings.each do |rank| %>
+      <%=  render rank %>
+    <% end %>
+  </ol>
+<% else %>
+  <p class="emptyStudents">
+    No current mentors
+  </p>
+<% end %>

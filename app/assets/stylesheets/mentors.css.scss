@@ -1,0 +1,159 @@
+// Place all the styles related to the mentors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#studentsDiv{
+  float: right;
+  clear: left;
+}
+#studentsLinksDiv{
+  margin: 0;
+  padding: 0 0 0 0;
+}
+#showcase{
+  float: left;
+  width: auto;
+}
+#rankingsDiv{
+  max-width: 400px;
+  width: 300px;
+  padding-bottom: 0;
+  float: right;
+}
+#welcomeDiv{
+  float: left;
+}
+ul.studentLinks{
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+a.students:link{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  width: 90%;
+  background-color: #000;
+  padding: 2px 3px 2px 3px;
+  margin: 0 0 0 5%;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+a.students:visited{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  background-color: #000;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+a.students:hover{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  width: 90%;
+  background-color: #CCC;
+  margin: 0 0 0 5%;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+a.studentSelected{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  background-color: #CCC;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+ol#ranks{
+  text-align: left;
+  list-style-position: inside;
+}
+li.ranks{
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  background-color: #FFF;
+  padding: 5px 5px 5px 5px;
+  color: #000;
+  box-shadow: 3px 3px 4px #BDBDBD;
+  min-width: 200px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  cursor: move;
+}
+#filterStudents{
+  background-color: #000;
+  color: #FFF;
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px;
+  width: 100%;
+}
+.removeRank{
+  margin: 0 0 0 10px;
+  float: right;
+  color: #FF0000;
+}
+#headerTitle{
+  color: #FFF;
+}
+.welcomeText{
+  color: #FFF;
+  margin: 0 0 0 0;
+  font-size: 20px;
+  margin-right: 5px;
+}
+a.match:link{
+  display: inline-block;
+  width: 90%;
+  background-color: #FF0000;
+  padding: 2px 3px 2px 3px;
+  margin: 0 0 0 5%;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+a.match:visited{
+  display: inline-block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  background-color: #FF0000;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #FFF solid;
+  border-radius: 5px;
+}
+a.match:hover{
+  display: inline-block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  background-color: #00FF40;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #00FF40 solid;
+  border-radius: 5px;
+}
+a.matchSelected{
+  display: inline-block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  background-color: #00FF40;
+  padding: 2px 3px 2px 3px;
+  color: #FFF;
+  border-bottom: 1px #00FF40 solid;
+  border-radius: 5px;
+}
+.emptyStudents{
+  margin: 0 0 0 5%;
+  color: #D8D8D8;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.rankingsParagraph{
+  color: #088A4B;
+}

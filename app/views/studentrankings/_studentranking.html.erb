@@ -1,0 +1,6 @@
+<li id="<%= studentranking.id %>" name="<%= studentranking.rank %>" class="ranks">
+  Mentor #<%= studentranking.mentor.id %>
+  <%= link_to "x", [studentranking.mentor, studentranking],
+      :confirm => "Remove this mentor?",
+      :method => :delete, class: "removeRank", remote: true %>
+</li>

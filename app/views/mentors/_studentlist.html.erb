@@ -1,0 +1,12 @@
+<% if @students.present? %>
+  <ul class="studentLinks">
+    <% @students.each do |student| %>
+      <% @student = student %>
+      <%= render "studentlink", :locals =>{post: @student} %>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="emptyStudents">
+    No students available
+  </p>
+<% end %>

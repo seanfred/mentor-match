@@ -1,0 +1,8 @@
+Here is your list of rankings
+<% if @rankings.present? %>
+  <ol id="ranks">
+    <% @rankings.each do |rank| %>
+      <%= render rank %>
+    <% end %>
+  </ol>
+<% end %>

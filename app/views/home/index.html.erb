@@ -1,0 +1,21 @@
+<% @home = "sign up link will not show with this variable set" %>
+<% @needsignin = "sign in link will show with this variable set" %>
+<% content_for :home do %>
+	<% link_to "Admin", students_path %>
+<% end %>
+<h3 align="center">
+  Welcome to Mentor Match!
+</h3>
+<p>
+<div class="center">
+  <%= render "devise/registrations/form" %>
+</div>
+<!--
+<p align="center">
+  Please fill out the questionnaire that best suits your role at CodeFellows:
+</p>
+<center>
+<%= link_to "Student", new_student_path, class: "button round alert large" %>
+<%= link_to "Mentor", new_mentor_path, class: "button round alert large" %>
+-->
+</center>

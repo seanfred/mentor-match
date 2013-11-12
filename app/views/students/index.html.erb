@@ -1,0 +1,82 @@
+<div id="mentorsDiv">
+  <% if @user.mentor %>
+    <h2 class="subheader">
+      Your Mentor
+    </h2>
+      <ul class="mentorLinks">
+        <li>
+          <%= link_to "#{@mentor.personal_first_name.capitalize} #{@mentor.personal_last_name.capitalize}", mentor_path(@mentor), class: "match", remote: true %>
+        </li>
+      </ul>
+  <% end %>
+  <h2 class="subheader">
+    Your Current Mentor Rankings
+  </h2>
+  <div id="rankingsDiv">
+    <% if @rankings.present? %>
+      <ol id="studentranks">
+        <% @rankings.each do |rank| %>
+          <%=  render rank %>
+        <% end %>
+      </ol>
+    <% else %>
+      <p class="emptyStudents">
+        No current mentors
+      </p>
+    <% end %>
+  </div>
+  <h2 class="subheader">
+    View Mentor Profiles
+  </h2>
+  <div id="filter">
+    <a href="#" id="filterShow">V</a>
+    <%= link_to "View All Mentors", {controller: "students", action: "index", sort: "all"}, remote: true, class: "filterMentors filterMentorsSelected" %>
+    <div id="filterMentorsCompany">
+      <% @companies.each do |company| %>
+          <%= link_to "From #{company}", {controller: "students", action: "index", sort: company }, remote: true, class: "filterMentors" %>
+      <% end %>
+    </div>
+    <br />
+  </div>
+  <div id="mentorsLinksDiv">
+      <% if @mentors.present? %>
+        <ul class="mentorLinks">
+          <% @mentors.each do |mentor| %>
+            <% @mentor = mentor %>
+            <%= render "mentorlink", :locals =>{post: @mentor} %>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="emptyStudents">
+          No mentors available
+        </p>
+      <% end %>
+  </div>
+</div>
+<div id="showcase"  class="small-9 columns">
+  <div id="intro">
+    <h2>
+      Hello Code Fellow!
+    </h2>
+    <p>
+      Congratulations, you will be soon paired with a mentor.  Help us pair you!
+    </p>
+    <ol id="introOl">
+      <li>
+        Browse our mentors by clicking a link on the bottom right hand side of the page.
+      </li>
+      <li>
+        When you find someone you like, click add to rankings.
+      </li>
+      <li>
+        Then you can drag and drop to organize your rankings.
+      </li>
+      <li>
+        Keep an eye on your email because we'll be pairing you soon!
+      </li>
+    </ol>
+  </div>
+    <div id="introImage">
+      <img src="assets/seattle.png">
+    </div>
+</div>
