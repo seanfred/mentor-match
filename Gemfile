@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
-gem 'activerecord-mysql-adapter'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

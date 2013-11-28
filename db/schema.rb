@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130627045611) do
+ActiveRecord::Schema.define(:version => 20131128234951) do
 
   create_table "mentors", :force => true do |t|
     t.string   "personal_first_name"
@@ -55,31 +55,6 @@ ActiveRecord::Schema.define(:version => 20130627045611) do
     t.datetime "created_at",                        :null => false
     t.datetime "updated_at",                        :null => false
     t.integer  "user_id"
-  end
-
-  create_table "notifications", :force => true do |t|
-    t.string   "subject"
-    t.string   "message"
-    t.string   "receiver_type"
-    t.integer  "receiver_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "rankings", :force => true do |t|
-    t.integer  "mentor_id"
-    t.integer  "student_id"
-    t.integer  "rank"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "studentrankings", :force => true do |t|
-    t.integer  "mentor_id"
-    t.integer  "student_id"
-    t.integer  "rank"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "students", :force => true do |t|
