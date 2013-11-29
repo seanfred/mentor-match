@@ -1,4 +1,7 @@
 MentorMatch::Application.routes.draw do
+  resources :camps
+
+
   devise_for :users
 
   resources :students
@@ -6,6 +9,8 @@ MentorMatch::Application.routes.draw do
   resources :mentors
 
   resources :home
+
+  resources :camps
 
   root :to => 'home#index'
 
