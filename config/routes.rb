@@ -1,14 +1,11 @@
 MentorMatch::Application.routes.draw do
   devise_for :users
 
-  resources :students do
-    resources :rankings
-  end
-  resources :mentors do
-    resources :studentrankings
-  end
+  resources :students
+
+  resources :mentors
+
   resources :home
-  resources :notifications
 
   root :to => 'home#index'
 
@@ -17,22 +14,25 @@ MentorMatch::Application.routes.draw do
     resources :users
   end
 
-  #This is sent to both mentors and students when they are paired
-  match '/thanks' => "students#thanks"
 
-  match '/rankings' => "mentors#rankings"
 
-  match '/studentrankings' => "students#rankings"
+
+
+
+
+
+
+
 
   #This is used by the admin to pair students
-  match '/paired' => "admin::users#paired"
-  match '/pair' => "admin::users#pair"
+  # match '/paired' => "admin::users#paired"
+  # match '/pair' => "admin::users#pair"
 
-  match "/rank" => "rankings#update_ranks", as: :update_ranks
-  match "/studentrank" => "studentrankings#update_ranks", as: :update_studentranks
-  match "/pending" => "admin::users#pending_users", as: :pending_users
-  match "/approve" => "admin::users#approve"
-  match "/needsapproval" => "home#need_approval"
+  # match "/rank" => "rankings#update_ranks", as: :update_ranks
+  # match "/studentrank" => "studentrankings#update_ranks", as: :update_studentranks
+  # match "/pending" => "admin::users#pending_users", as: :pending_users
+  # match "/approve" => "admin::users#approve"
+  # match "/needsapproval" => "home#need_approval"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
