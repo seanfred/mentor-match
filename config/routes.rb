@@ -15,6 +15,8 @@ MentorMatch::Application.routes.draw do
 
   resources :camps
 
+  resources :reviews
+
   root :to => 'home#index'
 
   namespace :admin do
