@@ -1,9 +1,6 @@
 MentorMatch::Application.routes.draw do
-  resources :mentorships
-
 
   resources :reviews
-
 
   resources :camps
 

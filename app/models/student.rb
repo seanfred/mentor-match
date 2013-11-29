@@ -29,8 +29,10 @@ class Student < ActiveRecord::Base
   validates :personal_first_name, presence: true
   validates :personal_last_name, presence: true
 
-  belongs_to :mentor
-  has_many :rankings, dependent: :delete_all
-  has_many :studentrankings, dependent: :delete_all
+
   belongs_to :user, dependent: :delete
+  belongs_to :camp
+  has_many :mentorships
+  has_many :mentors, through: :mentorships
+
 end

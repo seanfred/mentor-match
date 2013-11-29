@@ -33,8 +33,8 @@ class Mentor < ActiveRecord::Base
   validates :career_company_private, presence: true
   validates :career_job_title, presence: true
 
-  has_many :students
-  has_many :rankings, dependent: :delete_all
-  has_many :studentrankings, dependent: :delete_all
+  has_many :students, through: :mentorships
   belongs_to :user, dependent: :delete
+  has_many :reviews
+  has_many :mentorships
 end
