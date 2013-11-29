@@ -2864,3 +2864,26 @@ Migrating to CreateReviews (20131129064912)
   [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131129064912')[0m
   [1m[35m (45.9ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (45.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20130520195429)
+Migrating to CreateStudents (20130521194119)
+Migrating to CreateMentors (20130523160434)
+Migrating to CreateNotifications (20130528174557)
+Migrating to AddStudentandMentorBooleanFieldstoUser (20130610161750)
+Migrating to AddUseridtoMentorsandStudentsTable (20130610220856)
+Migrating to CreateRankings (20130612160705)
+Migrating to CreateTableStudentrankings (20130627045611)
+Migrating to DropRankings (20131128234051)
+Migrating to DropStudentrankings (20131128234445)
+Migrating to DropNotifications (20131128234951)
+Migrating to CreateCamps (20131129063421)
+Migrating to CreateReviews (20131129064912)
+Migrating to CreateMentorships (20131129160848)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "mentorships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "mentor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131129160848')[0m
+  [1m[35m (16.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m

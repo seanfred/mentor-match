@@ -1,4 +1,7 @@
 MentorMatch::Application.routes.draw do
+  resources :mentorships
+
+
   resources :reviews
 
 
@@ -16,6 +19,8 @@ MentorMatch::Application.routes.draw do
   resources :camps
 
   resources :reviews
+
+  resources :mentorships
 
   root :to => 'home#index'
 
