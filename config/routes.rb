@@ -9,13 +9,11 @@ MentorMatch::Application.routes.draw do
 
   resources :students
 
-  resources :mentors
+  resources :mentors do
+    resources :reviews
+  end
 
   resources :home
-
-  resources :camps
-
-  resources :reviews
 
   resources :mentorships
 
