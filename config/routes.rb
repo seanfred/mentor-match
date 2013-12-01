@@ -1,5 +1,10 @@
 MentorMatch::Application.routes.draw do
 
+  resources :linkedin
+  match '/linkedin_profile' => 'linkedin#index'
+  match '/oauth_account' => "linkedin#oauth_account"
+  match '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
+
   resources :reviews
 
   resources :camps

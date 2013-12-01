@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
+gem 'linkedin'
+gem 'binding_of_caller'
 
 
 # Gems used only for assets and not required
