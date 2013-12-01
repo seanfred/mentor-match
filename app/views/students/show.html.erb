@@ -1,2 +1,15 @@
-<% @tableWidth = "100%" %>
-<%= render "student" %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student:</b>
+  <%= @student.name %>
+</p>
+
+<p>
+  <b>LinkedIn:</b>
+  <%= @student.profile %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

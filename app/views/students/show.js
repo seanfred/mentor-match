@@ -1,1 +1,0 @@
-$("#showcase").empty().append('<%= j render @student %>').hide().slideDown(1000)
