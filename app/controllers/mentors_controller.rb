@@ -1,9 +1,6 @@
 class MentorsController < ApplicationController
 
   before_filter :authenticate_user!
-  before_filter :current_user_approved?,
-                  except: [ :new,
-                            :create]
 
   def index
     @mentors = Mentor.all

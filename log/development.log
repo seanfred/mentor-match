@@ -3738,3 +3738,2292 @@ Connecting to database specified by database.yml
 Migrating to DeviseCreateUsers (20130520195429)
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:32:28 -0800
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (10.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/_form.html.erb (39.2ms)
+  Rendered home/index.html.erb within layouts/application (55.6ms)
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/_form.html.erb (61.6ms)
+Completed 200 OK in 1155ms (Views: 958.3ms | ActiveRecord: 87.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /mentors.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /admin/users.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /mentorships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /sessions.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /rankings.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /students.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /notifications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (102ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /list.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /application.css - 304 Not Modified (81ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /admin-large.png - 304 Not Modified (18ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /codefellows2.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/index.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:30 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (100ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /admin/users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /mentors.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /jquery-ui.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /students.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /ranking.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /mentorships.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:31 -0800
+Served asset /notifications.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/_form.html.erb (11.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.8ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (3.4ms)
+Completed 200 OK in 287ms (Views: 284.0ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /notifications.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /students.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:32:54 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:32:55 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:33:10 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/sessions/_form.html.erb (12.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.8ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (9.7ms)
+Completed 200 OK in 546ms (Views: 545.1ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /admin/users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /admin-large.png - 304 Not Modified (29ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /codefellows2.png - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /jquery-ui.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /sessions.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:11 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ldnk/7AppqFY5pBOKii43lFmhEqmEYChGY2THwIZa6U=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/_form.html.erb (8.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.9ms)
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/_form.html.erb (2.8ms)
+Completed 200 OK in 222ms (Views: 197.3ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /students.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:19 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /jquery-ui.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:33:20 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-30 21:33:48 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ldnk/7AppqFY5pBOKii43lFmhEqmEYChGY2THwIZa6U=", "user"=>{"email"=>"lanslo@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (10.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lanslo@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/_form.html.erb (11.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.5ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (4.4ms)
+Completed 200 OK in 591ms (Views: 351.5ms | ActiveRecord: 0.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /notifications.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:49 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:50 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:33:50 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/_form.html.erb (44.5ms)
+  Rendered home/index.html.erb within layouts/application (46.9ms)
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/_form.html.erb (6.7ms)
+Completed 200 OK in 218ms (Views: 207.1ms | ActiveRecord: 0.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:55 -0800
+Served asset /admin/users.css - 304 Not Modified (122ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /list.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /admin/users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:34:56 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-30 21:35:08 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ldnk/7AppqFY5pBOKii43lFmhEqmEYChGY2THwIZa6U=", "user"=>{"email"=>"lanslo@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lanslo@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (58.0ms)[0m  [1mINSERT INTO "users" ("admin", "approval", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "role", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["approval", 0], ["created_at", Sun, 01 Dec 2013 05:35:09 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "lanslo@example.com"], ["encrypted_password", "$2a$10$bvYRHSlpD7vmt1EKRT6p1egwVQmCpopJUB8pBs5xhCHiei2rpjKK."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["role", nil], ["sign_in_count", 0], ["updated_at", Sun, 01 Dec 2013 05:35:09 UTC +00:00]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-12-01 05:35:09.076219', "current_sign_in_at" = '2013-12-01 05:35:09.076219', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-12-01 05:35:09.077315' WHERE "users"."id" = 1
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/needsapproval
+Completed 302 Found in 193ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/needsapproval" for 127.0.0.1 at 2013-11-30 21:35:09 -0800
+
+ActionController::RoutingError (No route matches [GET] "/needsapproval"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/administrator/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:36:57 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/_form.html.erb (44.3ms)
+  Rendered home/index.html.erb within layouts/application (45.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStudent Load (15.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (1.3ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (12.5ms)
+Completed 200 OK in 474ms (Views: 452.4ms | ActiveRecord: 19.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /notifications.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:36:58 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:37:03 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/needsapproval
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/needsapproval" for 127.0.0.1 at 2013-11-30 21:37:03 -0800
+
+ActionController::RoutingError (No route matches [GET] "/needsapproval"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/administrator/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/_form.html.erb (46.2ms)
+  Rendered home/index.html.erb within layouts/application (47.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (16.7ms)
+Completed 200 OK in 364ms (Views: 361.2ms | ActiveRecord: 2.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /list.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:10 -0800
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:11 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/_form.html.erb (6.1ms)
+  Rendered home/index.html.erb within layouts/application (8.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/_form.html.erb (2.8ms)
+Completed 200 OK in 190ms (Views: 189.4ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:19 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:20 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/_form.html.erb (4.4ms)
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/_form.html.erb (4.2ms)
+Completed 200 OK in 199ms (Views: 198.3ms | ActiveRecord: 0.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /list.js - 304 Not Modified (107ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:24 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:25 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-30 21:42:47 -0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-30 21:42:47 -0800
+Processing by HomeController#index as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/_form.html.erb (3.9ms)
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (3.7ms)
+Completed 200 OK in 252ms (Views: 250.8ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /students.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:48 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2013-11-30 21:42:53 -0800
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" 
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (117.5ms)
+Completed 200 OK in 332ms (Views: 326.3ms | ActiveRecord: 0.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /home.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /notifications.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /jquery-ui.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:42:54 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Processing by StudentsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered students/_form.html.erb (116.2ms)
+  Rendered students/new.html.erb within layouts/application (127.8ms)
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."user_id" = 1 LIMIT 1
+  [1m[36mMentor Load (0.1ms)[0m  [1mSELECT "mentors".* FROM "mentors" WHERE "mentors"."user_id" = 1 LIMIT 1[0m
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (8.9ms)
+Completed 200 OK in 353ms (Views: 331.9ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /admin/users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /rankings.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin-large.png" for 127.0.0.1 at 2013-11-30 21:43:00 -0800
+Served asset /admin-large.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-30 21:43:01 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)

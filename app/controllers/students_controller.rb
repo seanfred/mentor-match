@@ -1,15 +1,7 @@
 	class StudentsController < ApplicationController
-  before_filter :authorizes_admins_or_Students_or_a_student!,
-  									only: 	[	:show]
-	before_filter :authorizes_admins_or_a_student!,
-										only: 	[	:edit,
-															:update,
-															:destroy]
+
 	before_filter :authenticate_user!
-	before_filter :current_user_approved?,
-										except: [	:new,
-															:create,
-															:thanks]
+
 
 def index
     @students = Student.all
