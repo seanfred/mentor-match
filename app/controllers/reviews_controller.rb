@@ -1,8 +1,9 @@
 class ReviewsController < ApplicationController
+  before_filter :set_mentor
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = @mentor.reviews
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/1
   # GET /reviews/1.json
   def show
-    @review = Review.find(params[:id])
+    @review = @mentor.reviews.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   # GET /reviews/new.json
   def new
-    @review = Review.new
+    @review = @mentor.reviews.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +35,17 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
-    @review = Review.find(params[:id])
+    @review = @mentor.reviews.find(params[:id])
   end
 
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(params[:review])
+    @review = @mentor.reviews.new(params[:review])
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
+        format.html { redirect_to [@mentor, @review], notice: 'Review was successfully created.' }
         format.json { render json: @review, status: :created, location: @review }
       else
         format.html { render action: "new" }
@@ -56,11 +57,11 @@ class ReviewsController < ApplicationController
   # PUT /reviews/1
   # PUT /reviews/1.json
   def update
-    @review = Review.find(params[:id])
+    @review = @mentor.reviews.find(params[:id])
 
     respond_to do |format|
       if @review.update_attributes(params[:review])
-        format.html { redirect_to @review, notice: 'Review was successfully updated.' }
+        format.html { redirect_to [@mentor, @review], notice: 'Review was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,12 +73,19 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
-    @review = Review.find(params[:id])
+    @review = @mentor.reviews.find(params[:id])
     @review.destroy
 
     respond_to do |format|
-      format.html { redirect_to reviews_url }
+      format.html { redirect_to mentor_reviews_path(@mentor) }
       format.json { head :no_content }
     end
   end
+
+  private
+
+  def set_mentor
+    @mentor = Mentor.find(params[:mentor_id])
+  end
+
 end

@@ -1,2 +1,21 @@
-<% @tableWidth = "100%" %>
-<%= render "mentor" %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mentor:</b>
+  <%= @mentor.personal_first_name @mentor.personal_last_name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @mentor.career_job_title %>
+</p>
+
+
+<p>
+<h2> Reviews</h2>
+  <%= render "reviews/revi" %>
+  <%= render "reviews/form" %>
+</p>
+
+<%= link_to 'Edit', edit_mentor_path(@mentor) %> |
+<%= link_to 'Back', mentors_path %>

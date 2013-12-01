@@ -1,24 +1,6 @@
 <h1>Listing reviews</h1>
 
-<table>
-  <tr>
-    <th>Student</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @reviews.each do |review| %>
-  <tr>
-    <td><%= review.student %></td>
-    <td><%= review.body %></td>
-    <td><%= link_to 'Show', review %></td>
-    <td><%= link_to 'Edit', edit_review_path(review) %></td>
-    <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<%= render "reviews/revi" %>
 
 <br />
 
