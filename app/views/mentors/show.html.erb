@@ -2,20 +2,14 @@
 
 <p>
   <b>Mentor:</b>
-  <%= @mentor.personal_first_name @mentor.personal_last_name %>
+  <%= @mentor.mentor_id %>
 </p>
 
 <p>
-  <b>Body:</b>
-  <%= @mentor.career_job_title %>
+  <b>LinkedIn:</b>
+  <%= @mentor.profile %>
 </p>
 
-
-<p>
-<h2> Reviews</h2>
-  <%= render "reviews/revi" %>
-  <%= render "reviews/form" %>
-</p>
 
 <%= link_to 'Edit', edit_mentor_path(@mentor) %> |
 <%= link_to 'Back', mentors_path %>

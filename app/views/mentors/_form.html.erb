@@ -1,304 +1,33 @@
-<% @tableWidth ||= "600px" %>
-<%= form_for @mentor do |f| %>
-	<div class="right">
-		Class <%= f.select :cf_class,
-											options_for_select([['Ruby on Rails May/June', 'rails2'], ['Ruby on Rails July/August', 'rails3']], @mentor.cf_class), {},
-											{class: "classInput"} %><br /><br />
-	</div>
-	<table align="center" width="<%= @tableWidth %>" class="clear" >
-		<tr>
-			<td>First Name</td>
-			<td><%= f.text_field :personal_first_name, {id: "personal_first_name"} %></td>
-		</tr>
-		<tr>
-			<td>Last Name</td>
-			<td><%= f.text_field :personal_last_name, {id: "personal_last_name" } %></td>
-		</tr>
-		<tr>
-			<td>What is your current title?</td>
-			<td><%= f.text_field :career_job_title, {id: "career_job_title"} %></td>
-		</tr>
-		<tr>
-			<td>What company do you work for now?</td>
-			<td><%= f.text_field :career_company_private, {id: "career_company_private"} %></td>
-		</tr>
-		<tr>
-			<td>Do you work at a:</td>
-			<td><%= f.select :career_company_type,
-											options_for_select([['Startup', 'startup'],
-																					['Larger Company', 'largeco'],
-																					['Self Employed', 'self'],
-																					['No Preference', 'none']]) %></td>
-		</tr>
-		<tr>
-			<td>Why do you want to be a Code Fellows Mentor?</td>
-			<td><%= f.text_field :personal_why_mentor, {id: "personal_why_mentor"} %></td>
-		</tr>
-		<tr>
-		<tr>
-			<td>
-				What kind of knowledge do you think you can impart upon your mentee?</td>
-			<td><%= f.text_field :personal_knowledge_impart, {id: "personal_knowledge_impart"} %></td>
-		</tr>
-		<tr>
-			<td>What is your career history like?</td>
-			<td><%= f.text_field :career_information, {id: "career_information"} %></td>
-		</tr>
-		<tr>
-			<td>If you attended university, which one?</td>
-			<td>
-					<%= f.text_field :experience_university, {id: "experience_university"} %></td>
-		</tr>
-		<tr>
-			<td>Did you receive a degree? If so, for what?</td>
-			<td><%= f.text_field :experience_degree, {id: "experience_degree"} %></td>
-		</tr>
-		<tr>
-			<td>Any other degree or college experience?</td>
-			<td><%= f.text_field :experience_other_degree, {id: "experience_other_degree"} %></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Which skills below do you think that you
-				would be capable of helping a mentee improve upon?</td>
-		</tr>
-		<tr>
-			<td>Developer skills?</td>
-			<td><%= f.select :mentee_skills_developer,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>Object Oriented Programming?</td>
-			<td><%= f.select :mentee_skills_object,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>
-				Which of the following languages/frameworks do you feel you
-				are capable of teaching?</td>
-		</tr>
-		<tr>
-			<td>HTML/CSS/XML</td>
-			<td><%= f.select :mentee_skills_html_css,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>JavaScript</td>
-			<td><%= f.select :mentee_skills_javascript,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>Java</td>
-			<td><%= f.select :mentee_skills_java,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>C++</td>
-			<td><%= f.select :mentee_skills_cplusplus,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>C</td>
-			<td><%= f.select :mentee_skills_c,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>Ruby</td>
-			<td><%= f.select :mentee_skills_ruby,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>Python</td>
-			<td><%= f.select :mentee_skills_python,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>PHP</td>
-			<td><%= f.select :mentee_skills_php,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>.NET</td>
-			<td><%= f.select :mentee_skills_net,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>CoffeeScript</td>
-			<td><%= f.select :mentee_skills_coffeescript,
-											options_for_select([['Very Able', '3'],
-																					['Somewhat Able', '2'],
-																					['Not Able', '1']]) %></td>
-		</tr>
-		<tr>
-			<td>Other Coding Skills</td>
-			<td><%= f.text_field :mentee_skills_other_coding, {:id => "mentee_skills_other_coding"} %></td>
-		</tr>
-		<tr>
-			<td colspan="2">
-				Please rate your ability to help your mentee in the areas:</td>
-		</tr>
-		<tr>
-			<td>Career Advice</td>
-			<td>1
-						<%= f.radio_button :skills_career_advice, "1" %>
-					2
-						<%= f.radio_button :skills_career_advice, "2" %>
-					3
-						<%= f.radio_button :skills_career_advice, "3" %>
-					4
-						<%= f.radio_button :skills_career_advice, "4" %>
-					5
-						<%= f.radio_button :skills_career_advice, "5" %>
-					</td>
-		</tr>
-			<td>Developer Skill Development</td>
-			<td>1
-						<%= f.radio_button :skills_development, "1" %>
-					2
-						<%= f.radio_button :skills_development, "2" %>
-					3
-						<%= f.radio_button :skills_development, "3" %>
-					4
-						<%= f.radio_button :skills_development, "4" %>
-					5
-						<%= f.radio_button :skills_development, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Assistance with Coding Question/Tactics</td>
-			<td>1
-						<%= f.radio_button :skills_coding_question_tactics, "1" %>
-					2
-						<%= f.radio_button :skills_coding_question_tactics, "2" %>
-					3
-						<%= f.radio_button :skills_coding_question_tactics, "3" %>
-					4
-						<%= f.radio_button :skills_coding_question_tactics, "4" %>
-					5
-						<%= f.radio_button :skills_coding_question_tactics, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Soft Skills(presentation, leading teams, etc.)</td>
-			<td>1
-						<%= f.radio_button :skills_soft_skills, "1" %>
-					2
-						<%= f.radio_button :skills_soft_skills, "2" %>
-					3
-						<%= f.radio_button :skills_soft_skills, "3" %>
-					4
-						<%= f.radio_button :skills_soft_skills, "4" %>
-					5
-						<%= f.radio_button :skills_soft_skills, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Interview coaching</td>
-			<td>1
-						<%= f.radio_button :skills_interview_coaching, "1" %>
-					2
-						<%= f.radio_button :skills_interview_coaching, "2" %>
-					3
-						<%= f.radio_button :skills_interview_coaching, "3" %>
-					4
-						<%= f.radio_button :skills_interview_coaching, "4" %>
-					5
-						<%= f.radio_button :skills_interview_coaching, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Job Search</td>
-			<td>1
-						<%= f.radio_button :skills_job_search, "1" %>
-					2
-						<%= f.radio_button :skills_job_search, "2" %>
-					3
-						<%= f.radio_button :skills_job_search, "3" %>
-					4
-						<%= f.radio_button :skills_job_search, "4" %>
-					5
-						<%= f.radio_button :skills_job_search, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Resume Development</td>
-			<td>1
-						<%= f.radio_button :skills_resume_development, "1" %>
-					2
-						<%= f.radio_button :skills_resume_development, "2" %>
-					3
-						<%= f.radio_button :skills_resume_development, "3" %>
-					4
-						<%= f.radio_button :skills_resume_development, "4" %>
-					5
-						<%= f.radio_button :skills_resume_development, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>GitHub Account Development</td>
-			<td>1
-						<%= f.radio_button :skills_github_account_development, "1" %>
-					2
-						<%= f.radio_button :skills_github_account_development, "2" %>
-					3
-						<%= f.radio_button :skills_github_account_development, "3" %>
-					4
-						<%= f.radio_button :skills_github_account_development, "4" %>
-					5
-						<%= f.radio_button :skills_github_account_development, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Assistance with Selling yourself or an idea</td>
-			<td>1
-						<%= f.radio_button :skills_selling_idea, "1" %>
-					2
-						<%= f.radio_button :skills_selling_idea, "2" %>
-					3
-						<%= f.radio_button :skills_selling_idea, "3" %>
-					4
-						<%= f.radio_button :skills_selling_idea, "4" %>
-					5
-						<%= f.radio_button :skills_selling_idea, "5" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Do you prefer a:</td>
-			<td>Male
-						<%= f.radio_button :mentee_gender, "m" %>
-					Female
-						<%= f.radio_button :mentee_gender, "f" %>
-					No Preference
-						<%= f.radio_button :mentee_gender, "n" %>
-					</td>
-		</tr>
-		<tr>
-			<td>Feel free to add anything else here:</td>
-			<td><%= f.text_area :mentee_extra_info, {id: "mentee_extra_info" } %></td>
-		<tr>
-			<td colspan="2" align="right"><%= f.submit "#{@submittext}", class: "button alert small" %></td>
-		</tr>
-	</table>
-<%- end %>
+<%= form_for(@mentor) do |f| %>
+  <% if @mentor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mentor.errors.count, "error") %> prohibited this mentor from being saved:</h2>
+
+      <ul>
+      <% @mentor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.number_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :profile %><br />
+    <%= f.number_field :profile %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

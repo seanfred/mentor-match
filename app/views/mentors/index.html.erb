@@ -1,86 +1,24 @@
-<div id="studentsDiv">
-  <% if @current_mentees.present? %>
-    <h2 class="subheader">
-      Your Mentees
-    </h2>
-    <ul class="studentLinks">
-      <% @current_mentees.each do |mentee| %>
-        <% @mentee = mentee %>
-        <%= render "menteelink", :locals =>{post: @mentee} %>
-      <% end %>
-    </ul>
-  <% end %>
-  <h2 class="subheader">
-    Your Current Mentee Rankings
-  </h2>
-  <div id="rankingsDiv">
-    <% if @rankings.present? %>
-      <ol id="ranks">
-        <% @rankings.each do |rank| %>
-          <%=  render rank %>
-        <% end %>
-      </ol>
-    <% else %>
-      <p class="emptyStudents">
-        No current students
-      </p>
-    <% end %>
-  </div>
-  <h2 class="subheader">View Mentee Profiles</h2>
-  <div id="filter">
-    <a href="#" id="filterShow">V</a>
-    <%= link_to "View All Students", {controller: "mentors", action: "index", sort: "all"}, remote: true, class: "filterMentors filterMentorsSelected" %>
-    <div id="filterMentorsCompany">
-      <% if @classes.any? %>
-        <% @classes.each do |key, cf_class, company| %>
-          <% if company.present? %>
-            <%= link_to "#{cf_class}", {controller: "mentors", action: "index", sort: key, company: true}, remote: true, class: "filterMentors" %>
-          <% else %>
-            <%= link_to "#{cf_class}", {controller: "mentors", action: "index", sort: key}, remote: true, class: "filterMentors" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <div id="studentsLinksDiv">
-      <% if @students.present? %>
-        <ul class="studentLinks">
-          <% @students.each do |student| %>
-            <% @student = student %>
-            <%= render "studentlink", :locals =>{post: @student} %>
-          <% end %>
-        </ul>
-      <% else %>
-        <p class="emptyStudents">
-          No students available
-        </p>
-      <% end %>
-  </div>
-</div>
-<div id="showcase" class="small-9 columns">
-  <div id="intro">
-    <h2>
-      Hello Mentor!
-    </h2>
-    <p>
-      Thanks for helping out a Code Fellow.  Help us pair you!
-    </p>
-    <ol id="introOl">
-      <li>
-        Browse our students by clicking a link on the right hand side of the page.
-      </li>
-      <li>
-        When you find someone you like, click add to rankings.
-      </li>
-      <li>
-        Then you can drag and drop to organize your rankings.
-      </li>
-      <li>
-        Keep an eye on your email because we'll be pairing you soon!
-      </li>
-    </ol>
-  </div>
-  <div id="introImage">
-    <img src="assets/seattle.png">
-  </div>
-</div>
+<h1>Listing mentors</h1>
+
+<table>
+  <tr>
+    <th>Mentor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mentors.each do |mentor| %>
+  <tr>
+    <td><%= mentor.name %></td>
+    <td><%= mentor.profile %></td>
+    <td><%= link_to 'Show', mentor %></td>
+    <td><%= link_to 'Edit', edit_mentor_path(mentor) %></td>
+    <td><%= link_to 'Destroy', mentor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mentor', new_mentor_path %>

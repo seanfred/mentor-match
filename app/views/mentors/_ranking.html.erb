@@ -1,7 +1,0 @@
-<li id="<%= rank.id %>" name="<%= rank.rank %>" class="ranks">
-  <%= rank.student.personal_first_name.capitalize %>
-  <%= rank.student.personal_last_name.capitalize %>
-  <%= link_to "x", [rank.student, rank],
-      :confirm => "Remove this student?",
-      :method => :delete, class: "removeRank", remote: true %>
-</li>
