@@ -97,6 +97,7 @@ GEM
     fssm (0.2.10)
     haml (4.0.4)
       tilt
+    hashie (2.0.5)
     highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.1)
@@ -110,6 +111,10 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.3.0)
       addressable (~> 2.3)
+    linkedin (0.4.4)
+      hashie (>= 1.2, < 2.1)
+      multi_json (~> 1.0)
+      oauth (~> 0.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -120,6 +125,7 @@ GEM
     nifty-generators (0.4.6)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth (0.4.7)
     orm_adapter (0.5.0)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
@@ -252,6 +258,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   launchy
+  linkedin
   nifty-generators
   pry-debugger
   pry-rails

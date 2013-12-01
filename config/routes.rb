@@ -17,18 +17,18 @@ MentorMatch::Application.routes.draw do
 
   resources :mentorships
 
-  root :to => 'home#index'
+  #root :to => 'home#index'
 
-  namespace :admin do
-    root :to => "users#index"
-    resources :users
-  end
+  # namespace :admin do
+  #   root :to => "users#index"
+  #   resources :users
+  # end
 
-
-
-
-
-
+  resources :linkedin
+  match '/linkedin_profile' => "linkedin#linkedin_profile"
+  match '/oauth_account' => "linkedin#oauth_account"
+  match '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
+  root :to => 'linkedin#index'
 
 
 

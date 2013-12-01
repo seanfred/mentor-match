@@ -7865,3 +7865,4 @@ Served asset /sessions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-01 11:36:13 -0800
 Served asset /students.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
