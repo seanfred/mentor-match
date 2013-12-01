@@ -30,9 +30,12 @@ gem 'zurb-foundation', '~>4.0.0'
 gem 'fancybox-rails'
 gem 'simple_form'
 gem 'kaminari'
+gem 'nifty-generators'
+gem 'sunspot_rails'
 
 group :development do
   gem 'better_errors'
+  gem 'sunspot_solr'
 end
 
 group :test, :development do
