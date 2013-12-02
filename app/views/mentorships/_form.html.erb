@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :student_id %><br />
-    <%= f.number_field :student_id %>
+    <%= f.collection_select :student_id, Student.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :mentor_id %><br />
-    <%= f.number_field :mentor_id %>
+    <%= f.collection_select :mentor_id, Mentor.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
