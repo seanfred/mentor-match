@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
@@ -40,6 +40,7 @@ gem 'linkedin-scraper'
 group :development do
   gem 'better_errors'
   gem 'sunspot_solr'
+  gem 'sqlite3'
 end
 
 group :test, :development do
