@@ -1,14 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <b>Mentor:</b>
-  <%= @mentor.mentor_id %>
+  <%= @mentor.name %>
 </p>
 
 <p>
   <b>LinkedIn:</b>
   <%= @mentor.profile %>
 </p>
+
+<p>
+  <b>LinkedIn:</b>
+  <%= @profile %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @mentor.active %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @mentor.capacity %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_mentor_path(@mentor) %> |
