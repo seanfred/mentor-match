@@ -10,7 +10,7 @@ class MentorsController < ApplicationController
   }
 
   def index
-    @mentors = Mentor.all
+    @mentors = Mentor.where(:active => true)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +28,10 @@ class MentorsController < ApplicationController
     @educations = get_educations
 
     client = LinkedIn::Client.new('75z7i5v6pxpm37', 'Wj81lKgolV0SEJuK', @@config)
-    @profile = client.profile(:url => "#{@mentor.profile}")
+    @profile = Linkedin::Profile.get_profile("#{@mentor.profile}")
+
+    #@profile = client.profile(:url => "#{@mentor.profile}")
+
 
     respond_to do |format|
       format.html # show.html.erb

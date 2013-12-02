@@ -1,30 +1,54 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <img src="<%= @profile.picture %>">
+</p>
+<p>
 
 <p>
   <b>Mentor:</b>
-  <%= @mentor.name %>
+  <%= @profile.name%>
 </p>
 
 <p>
-  <b>LinkedIn:</b>
-  <%= @mentor.profile %>
+  <b><a href="<%= @profile.linkedin_url%>">LinkedIn</a></b>
+</p>
+
+  <b>Title</b>
+  <%= @profile.title %>
 </p>
 
 <p>
-  <b>LinkedIn:</b>
-  <%= @profile %>
+  <b>Industry</b>
+  <%= @profile.industry %>
+</p>
+<p>
+  <b>Summary</b>
+  <%= @profile.summary %>
 </p>
 
 <p>
-  <b>Status:</b>
+  <b>Employment</b>
+  <%= @profile.current_companies %>
+  <%= @profile.past_companies %>
+</p>
+
+<p>
+  <b>Education</b>
+  <%= @profile.education %>
+</p>
+
+
+<p>
+  <b>Open Spots:</b>
+  <%= @mentor.capacity %>
+</p>
+
+<p>
+  <b>Active:</b>
   <%= @mentor.active %>
 </p>
 
-<p>
-  <b>Capacity:</b>
-  <%= @mentor.capacity %>
-</p>
 
 
 
