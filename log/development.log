@@ -40529,3 +40529,4 @@ Served asset /sessions.js - 304 Not Modified (1ms)
 
 Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 14:04:09 -0800
 Served asset /ranking.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
