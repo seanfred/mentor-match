@@ -7,9 +7,5 @@ class Mentor < ActiveRecord::Base
   has_many :reviews
   has_many :mentorships
 
-  searchable do
-    text :profile
-  end
-
 
 end

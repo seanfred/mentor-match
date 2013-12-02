@@ -11,10 +11,11 @@
 <% @mentors.each do |mentor| %>
   <tr>
     <td><%= mentor.name %></td>
-    <td><%= mentor.profile %></td>
+    <td><%= mentor.capacity %></td>
     <td><%= link_to 'Show', mentor %></td>
     <td><%= link_to 'Edit', edit_mentor_path(mentor) %></td>
     <td><%= link_to 'Destroy', mentor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td> </td>
   </tr>
 <% end %>
 </table>
