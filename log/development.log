@@ -34647,3 +34647,4 @@ ArgumentError - comparison of Symbol with 0 failed:
 
 
 Started POST "/__better_errors/70148753006140/variables" for 127.0.0.1 at 2013-12-02 12:18:28 -0800
+Connecting to database specified by database.yml
