@@ -5,7 +5,7 @@ class MentorsController < ApplicationController
     @@config = {
       :site => 'https://api.linkedin.com',
       :authorize_path => '/uas/oauth/authenticate',
-      :request_token_path => '/uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network',
+      :request_token_path => '/uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network+rw_nus',
       :access_token_path => '/uas/oauth/accessToken'
   }
 
@@ -89,6 +89,29 @@ class MentorsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to mentors_url }
       format.json { head :no_content }
+    end
+  end
+
+
+  def oauth_account
+    client = LinkedIn::Client.new('75z7i5v6pxpm37', 'Wj81lKgolV0SEJuK', @@config)
+    pin = params[:oauth_verifier]
+    if pin
+      atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
+      LinkedinOauthSetting.create!(:asecret => asecret, :atoken => atoken, :user_id => current_user.id)
+    end
+    redirect_to "/"
+  end
+
+  def generate_linkedin_oauth_url
+    if LinkedinOauthSetting.find_by_user_id(current_user.id).nil?
+      client = LinkedIn::Client.new('75z7i5v6pxpm37', 'Wj81lKgolV0SEJuK', @@config)
+      request_token = client.request_token(:oauth_callback => "http://#{request.host}:#{request.port}/oauth_account")
+      session[:rtoken] = request_token.token
+      session[:rsecret] = request_token.secret
+      redirect_to request_token.authorize_url
+    else
+      redirect_to "/oauth_account"
     end
   end
 

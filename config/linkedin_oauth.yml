@@ -3,16 +3,16 @@ require 'oauth'
 require 'yaml'
 require 'json'
 
-# Convert this to a YAML file for your rails app, and load your configuration in an 
+# Convert this to a YAML file for your rails app, and load your configuration in an
 # environment-specific way, eg YAML.load_file('config/oauth.yml')[Rails.env]
 config = YAML.load(<<EOS
 linkedin-example:
   api_host: https://api.linkedin.com
-  request_token_path: /uas/oauth/requestToken
+  request_token_path: /uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network+rw_nus
   access_token_path: /uas/oauth/accessToken
   authorize_path: /uas/oauth/authorize
-  consumer_key: Insert your LinkedIn API Key here
-  consumer_secret: Insert your LinkedIn secret key here
+  consumer_key: 75z7i5v6pxpm37
+  consumer_secret: Wj81lKgolV0SEJuK
 EOS
 )
 
@@ -27,7 +27,7 @@ consumer_options = { :site => oauth_options['api_host'],
 consumer = OAuth::Consumer.new(oauth_options['consumer_key'], oauth_options['consumer_secret'], consumer_options)
 
 # Pass the access token and secret on the command line to re-run without having to request the access token every time
-if ARGV[0] && ARGV[1] 
+if ARGV[0] && ARGV[1]
   # Go straight to the access token (no need to do the oauth-dance if you've already got it)
   access_token = OAuth::AccessToken.new(consumer, ARGV[0], ARGV[1])
 else

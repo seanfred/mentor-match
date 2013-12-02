@@ -4,7 +4,7 @@ class LinkedinController < ApplicationController
     @@config = {
       :site => 'https://api.linkedin.com',
       :authorize_path => '/uas/oauth/authenticate',
-      :request_token_path => '/uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network',
+      :request_token_path => '/uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network+rw_nus',
       :access_token_path => '/uas/oauth/accessToken'
   }
 
@@ -95,8 +95,8 @@ class LinkedinController < ApplicationController
           Position.create(
             title: p.title,
             summary: p.summary,
-            start_date: Date.parse("1/#{p.start_date.month ? p.start_date.month : 1}/#{p.start_date.year}"),
-            end_date: Date.parse("1/#{p.end_date.month ? p.end_date.month : 1}/#{p.end_date.year}"),
+            # start_date: Date.parse("1/#{p.start_date.month ? p.start_date.month : 1}/#{p.start_date.year}"),
+            # end_date: Date.parse("1/#{p.end_date.month ? p.end_date.month : 1}/#{p.end_date.year}"),
             is_current: p.is_current,
             company: p.company.name,
             full_profile_id: current_user.full_profile.id)
@@ -104,7 +104,7 @@ class LinkedinController < ApplicationController
           Position.create(
             title: p.title,
             summary: p.summary,
-            start_date: Date.parse("1/#{p.start_date.month ? p.start_date.month : 1}/#{p.start_date.year}"),
+            # start_date: Date.parse("1/#{p.start_date.month ? p.start_date.month : 1}/#{p.start_date.year}"),
             is_current: p.is_current,
             company: p.company.name,
             full_profile_id: current_user.full_profile.id)
@@ -126,8 +126,8 @@ class LinkedinController < ApplicationController
         new_educations = Education.create(
           school_name: e.school_name,
           field_of_study: e.field_of_study,
-          start_date: Date.parse("1/#{e.end_date.month ? p.end_date.month : 1}/#{e.end_date.year}"),
-          end_date: Date.parse("1/#{e.end_date.month ? p.end_date.month : 1}/#{e.end_date.year}"),
+          # start_date: Date.parse("1/#{e.end_date.month ? p.end_date.month : 1}/#{e.end_date.year}"),
+          # end_date: Date.parse("1/#{e.end_date.month ? p.end_date.month : 1}/#{e.end_date.year}"),
           degree: e.degree,
           activities: e.activities,
           notes: e.notes,

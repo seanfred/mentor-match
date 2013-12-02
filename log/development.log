@@ -18512,3 +18512,1772 @@ LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a me
 
 
 Started POST "/__better_errors/70225792863760/variables" for 127.0.0.1 at 2013-12-01 22:06:24 -0800
+Connecting to database specified by database.yml
+
+
+Started POST "/mentors" for 127.0.0.1 at 2013-12-02 10:23:53 -0800
+Processing by MentorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2j/Tc8yxb3rJZGu99QilH4iSG2CBPiif4XLBLDEBwk=", "mentor"=>{"name"=>"Mateo Say", "profile"=>"http://www.linkedin.com/in/mlsayre", "active"=>"1", "capacity"=>"1"}, "commit"=>"Create Mentor"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (34.9ms)[0m  [1mINSERT INTO "mentors" ("active", "capacity", "created_at", "name", "profile", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["active", true], ["capacity", 1], ["created_at", Mon, 02 Dec 2013 18:23:54 UTC +00:00], ["name", "Mateo Say"], ["profile", "http://www.linkedin.com/in/mlsayre"], ["updated_at", Mon, 02 Dec 2013 18:23:54 UTC +00:00], ["user_id", nil]]
+  [1m[32mSOLR Request (12.0ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[35m (4.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/mentors/13
+  [1m[32mSOLR Request (74.0ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+Completed 302 Found in 369ms (ActiveRecord: 51.2ms)
+
+
+Started GET "/mentors/13" for 127.0.0.1 at 2013-12-02 10:23:54 -0800
+Processing by MentorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT 1  [["id", "13"]]
+  [1m[36mBasicProfile Load (0.1ms)[0m  [1mSELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mFullProfile Load (0.1ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mPosition Load (0.1ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2
+  [1m[36mEducation Load (0.1ms)[0m  [1mSELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2[0m
+Completed 500 Internal Server Error in 642ms
+
+LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a member:
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:52:in `raise_errors'
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:16:in `get'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:119:in `simple_query'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:8:in `profile'
+  app/controllers/mentors_controller.rb:31:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__4108256291053116446__process_action__1088007310752937069__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2681365253857365529__call__4288318757538290859__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70143781226900/variables" for 127.0.0.1 at 2013-12-02 10:23:55 -0800
+Connecting to database specified by database.yml
+
+
+Started GET "/mentors" for 127.0.0.1 at 2013-12-02 10:40:50 -0800
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mMentor Load (0.2ms)[0m  SELECT "mentors".* FROM "mentors" 
+  Rendered mentors/index.html.erb within layouts/application (16.2ms)
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/_form.html.erb (80.3ms)
+Completed 200 OK in 1114ms (Views: 1000.4ms | ActiveRecord: 2.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /camps.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /reviews.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /linkedin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /mentorships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /list.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/index.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /admin/users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /camps.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /jquery-ui.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /mentorships.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /mentors.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /ranking.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /linkedin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:51 -0800
+Served asset /students.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:52 -0800
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:52 -0800
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:52 -0800
+Served asset /notifications.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:40:52 -0800
+Served asset /reviews.js - 304 Not Modified (1ms)
+
+
+Started GET "/mentors/new" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Processing by MentorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered mentors/_form.html.erb (4.0ms)
+  Rendered mentors/new.html.erb within layouts/application (5.3ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (3.2ms)
+Completed 200 OK in 207ms (Views: 205.1ms | ActiveRecord: 0.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /camps.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /camps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:41:02 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started POST "/mentors" for 127.0.0.1 at 2013-12-02 10:41:15 -0800
+Processing by MentorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2j/Tc8yxb3rJZGu99QilH4iSG2CBPiif4XLBLDEBwk=", "mentor"=>{"name"=>"Matt Says", "profile"=>"http://www.linkedin.com/in/mlsayre", "active"=>"1", "capacity"=>"1"}, "commit"=>"Create Mentor"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (31.9ms)[0m  INSERT INTO "mentors" ("active", "capacity", "created_at", "name", "profile", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", true], ["capacity", 1], ["created_at", Mon, 02 Dec 2013 18:41:15 UTC +00:00], ["name", "Matt Says"], ["profile", "http://www.linkedin.com/in/mlsayre"], ["updated_at", Mon, 02 Dec 2013 18:41:15 UTC +00:00], ["user_id", nil]]
+  [1m[32mSOLR Request (25.1ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/mentors/14
+  [1m[32mSOLR Request (84.1ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+Completed 302 Found in 203ms (ActiveRecord: 39.9ms)
+
+
+Started GET "/mentors/14" for 127.0.0.1 at 2013-12-02 10:41:16 -0800
+Processing by MentorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mMentor Load (0.1ms)[0m  [1mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  [1m[35mBasicProfile Load (0.2ms)[0m  SELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mFullProfile Load (0.1ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2[0m
+  [1m[35mEducation Load (0.3ms)[0m  SELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2
+Completed 500 Internal Server Error in 416ms
+
+LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a member:
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:52:in `raise_errors'
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:16:in `get'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:119:in `simple_query'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:8:in `profile'
+  app/controllers/mentors_controller.rb:31:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__2380167337717095006__process_action__2306926401243720617__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__3005147561287046303__call__4522350510751915268__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70301879310920/variables" for 127.0.0.1 at 2013-12-02 10:41:16 -0800
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-02 10:44:26 -0800
+Processing by LinkedinController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mLinkedinOauthSetting Load (0.1ms)[0m  SELECT "linkedin_oauth_settings".* FROM "linkedin_oauth_settings" WHERE "linkedin_oauth_settings"."user_id" = 3 LIMIT 1
+Redirected to http://localhost:3000/linkedin_profile
+Completed 302 Found in 188ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/linkedin_profile" for 127.0.0.1 at 2013-12-02 10:44:26 -0800
+Processing by LinkedinController#linkedin_profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBasicProfile Load (0.1ms)[0m  SELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mFullProfile Load (0.1ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2[0m
+  [1m[35mEducation Load (0.1ms)[0m  SELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2
+  Rendered linkedin/linkedin_profile.html.erb within layouts/application (3.2ms)
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/_form.html.erb (72.2ms)
+Completed 200 OK in 559ms (Views: 398.9ms | ActiveRecord: 2.1ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /admin/users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /home.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /camps.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /mentorships.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /linkedin.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /mentors.css - 304 Not Modified (69ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /rankings.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /reviews.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /notifications.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /list.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /students.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /sessions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /codefellows2.png - 304 Not Modified (27ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:27 -0800
+Served asset /foundation/index.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /admin/users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /mentors.js - 304 Not Modified (96ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /camps.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /linkedin.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /notifications.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /mentorships.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /home.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /reviews.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /students.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /application.js - 304 Not Modified (41ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:44:28 -0800
+Served asset /ranking.js - 304 Not Modified (93ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-02 10:45:20 -0800
+Processing by LinkedinController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mLinkedinOauthSetting Load (0.1ms)[0m  SELECT "linkedin_oauth_settings".* FROM "linkedin_oauth_settings" WHERE "linkedin_oauth_settings"."user_id" = 3 LIMIT 1
+Redirected to http://localhost:3000/linkedin_profile
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/linkedin_profile" for 127.0.0.1 at 2013-12-02 10:45:20 -0800
+Processing by LinkedinController#linkedin_profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBasicProfile Load (0.1ms)[0m  SELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mFullProfile Load (0.1ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2[0m
+  [1m[35mEducation Load (0.1ms)[0m  SELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2
+  Rendered linkedin/linkedin_profile.html.erb within layouts/application (0.8ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (3.5ms)
+Completed 200 OK in 206ms (Views: 201.5ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/foundation.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /admin/users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /camps.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /mentors.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /notifications.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rankings.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /rankings.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /codefellows2.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /home.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /admin/users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /camps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /ranking.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:21 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/mentors" for 127.0.0.1 at 2013-12-02 10:45:52 -0800
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mMentor Load (0.2ms)[0m  SELECT "mentors".* FROM "mentors" 
+  Rendered mentors/index.html.erb within layouts/application (10.9ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (3.5ms)
+Completed 200 OK in 215ms (Views: 199.1ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /camps.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /camps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:53 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/mentors/new" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Processing by MentorsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered mentors/_form.html.erb (3.7ms)
+  Rendered mentors/new.html.erb within layouts/application (4.9ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/_form.html.erb (5.4ms)
+Completed 200 OK in 257ms (Views: 255.2ms | ActiveRecord: 0.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /camps.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /camps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /jquery-ui.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:56 -0800
+Served asset /notifications.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:57 -0800
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:57 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:57 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:57 -0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 10:45:57 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started POST "/mentors" for 127.0.0.1 at 2013-12-02 10:46:07 -0800
+Processing by MentorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2j/Tc8yxb3rJZGu99QilH4iSG2CBPiif4XLBLDEBwk=", "mentor"=>{"name"=>"Mas Say", "profile"=>"http://www.linkedin.com/in/mlsayre", "active"=>"1", "capacity"=>"1"}, "commit"=>"Create Mentor"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  INSERT INTO "mentors" ("active", "capacity", "created_at", "name", "profile", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", true], ["capacity", 1], ["created_at", Mon, 02 Dec 2013 18:46:07 UTC +00:00], ["name", "Mas Say"], ["profile", "http://www.linkedin.com/in/mlsayre"], ["updated_at", Mon, 02 Dec 2013 18:46:07 UTC +00:00], ["user_id", nil]]
+  [1m[32mSOLR Request (7.0ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36m (29.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/mentors/15
+  [1m[32mSOLR Request (35.8ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+Completed 302 Found in 99ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/mentors/15" for 127.0.0.1 at 2013-12-02 10:46:08 -0800
+Processing by MentorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mMentor Load (0.1ms)[0m  [1mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  [1m[35mBasicProfile Load (0.1ms)[0m  SELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mFullProfile Load (0.1ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2[0m
+  [1m[35mEducation Load (0.1ms)[0m  SELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2
+Completed 500 Internal Server Error in 692ms
+
+LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a member:
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:52:in `raise_errors'
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:16:in `get'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:119:in `simple_query'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:8:in `profile'
+  app/controllers/mentors_controller.rb:31:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3643708893989148817__process_action__1208039251213580816__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1906167214689097877__call__2252322230419312308__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70343602415400/variables" for 127.0.0.1 at 2013-12-02 10:46:08 -0800
+
+
+Started POST "/mentors" for 127.0.0.1 at 2013-12-02 11:19:59 -0800
+Processing by MentorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2j/Tc8yxb3rJZGu99QilH4iSG2CBPiif4XLBLDEBwk=", "mentor"=>{"name"=>"Mas Say", "profile"=>"http://www.linkedin.com/in/mbfrank", "active"=>"1", "capacity"=>"1"}, "commit"=>"Create Mentor"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "mentors" ("active", "capacity", "created_at", "name", "profile", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["active", true], ["capacity", 1], ["created_at", Mon, 02 Dec 2013 19:19:59 UTC +00:00], ["name", "Mas Say"], ["profile", "http://www.linkedin.com/in/mbfrank"], ["updated_at", Mon, 02 Dec 2013 19:19:59 UTC +00:00], ["user_id", nil]]
+  [1m[32mSOLR Request (16.9ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[35m (15.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/mentors/16
+  [1m[32mSOLR Request (74.8ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+Completed 302 Found in 128ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/mentors/16" for 127.0.0.1 at 2013-12-02 11:19:59 -0800
+Processing by MentorsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mMentor Load (0.1ms)[0m  SELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mBasicProfile Load (0.1ms)[0m  [1mSELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mFullProfile Load (0.1ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mPosition Load (0.2ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2
+  [1m[36mEducation Load (0.1ms)[0m  [1mSELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2[0m
+Completed 500 Internal Server Error in 275ms
+
+LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a member:
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:52:in `raise_errors'
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:16:in `get'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:119:in `simple_query'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:8:in `profile'
+  app/controllers/mentors_controller.rb:31:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3643708893989148817__process_action__1208039251213580816__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1906167214689097877__call__2252322230419312308__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70343629998180/variables" for 127.0.0.1 at 2013-12-02 11:19:59 -0800
+
+
+Started POST "/mentors" for 127.0.0.1 at 2013-12-02 11:28:46 -0800
+Processing by MentorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2j/Tc8yxb3rJZGu99QilH4iSG2CBPiif4XLBLDEBwk=", "mentor"=>{"name"=>"Mas Say", "profile"=>"http://www.linkedin.com/in/mbfrank", "active"=>"1", "capacity"=>"1"}, "commit"=>"Create Mentor"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "mentors" ("active", "capacity", "created_at", "name", "profile", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)  [["active", true], ["capacity", 1], ["created_at", Mon, 02 Dec 2013 19:28:46 UTC +00:00], ["name", "Mas Say"], ["profile", "http://www.linkedin.com/in/mbfrank"], ["updated_at", Mon, 02 Dec 2013 19:28:46 UTC +00:00], ["user_id", nil]]
+  [1m[32mSOLR Request (8.1ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36m (29.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/mentors/17
+  [1m[32mSOLR Request (67.5ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+Completed 302 Found in 115ms (ActiveRecord: 30.7ms)
+
+
+Started GET "/mentors/17" for 127.0.0.1 at 2013-12-02 11:28:46 -0800
+Processing by MentorsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mMentor Load (0.1ms)[0m  [1mSELECT "mentors".* FROM "mentors" WHERE "mentors"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mBasicProfile Load (0.1ms)[0m  SELECT "basic_profiles".* FROM "basic_profiles" WHERE "basic_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mFullProfile Load (0.1ms)[0m  [1mSELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "full_profiles".* FROM "full_profiles" WHERE "full_profiles"."user_id" = 3 LIMIT 1
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."full_profile_id" = 2[0m
+  [1m[35mEducation Load (0.1ms)[0m  SELECT "educations".* FROM "educations" WHERE "educations"."full_profile_id" = 2
+Completed 500 Internal Server Error in 286ms
+
+LinkedIn::Errors::AccessDeniedError - (403): Call must be made on behalf of a member:
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:52:in `raise_errors'
+  linkedin (0.4.4) lib/linked_in/helpers/request.rb:16:in `get'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:119:in `simple_query'
+  linkedin (0.4.4) lib/linked_in/api/query_methods.rb:8:in `profile'
+  app/controllers/mentors_controller.rb:31:in `show'
+  actionpack (3.2.13) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:425:in `_run__3643708893989148817__process_action__1208039251213580816__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.13) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.13) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.13) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.13) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.13) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.13) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__1906167214689097877__call__2252322230419312308__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.0.1) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/administrator/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/70343623361840/variables" for 127.0.0.1 at 2013-12-02 11:28:46 -0800
+
+
+Started GET "/mentors" for 127.0.0.1 at 2013-12-02 11:28:54 -0800
+Processing by MentorsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mMentor Load (0.2ms)[0m  SELECT "mentors".* FROM "mentors" 
+  Rendered mentors/index.html.erb within layouts/application (15.7ms)
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/_form.html.erb (3.4ms)
+Completed 200 OK in 281ms (Views: 276.4ms | ActiveRecord: 0.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/camps.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:54 -0800
+Served asset /camps.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /vendor/custom.modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /mentorships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /reviews.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/list.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /list.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/codefellows2.png" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /codefellows2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camps.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /camps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentorships.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /mentorships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /admin/users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /jquery-ui.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ranking.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /ranking.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mentors.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /mentors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /reviews.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/notifications.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /notifications.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-02 11:28:55 -0800
+Served asset /application.js - 304 Not Modified (2ms)
