@@ -8,4 +8,5 @@ class Mentor < ActiveRecord::Base
   has_many :mentorships
 
 
+
 end

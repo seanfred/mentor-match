@@ -102,7 +102,6 @@ GEM
     fssm (0.2.10)
     haml (4.0.4)
       tilt
-    hashie (2.0.5)
     highline (1.6.20)
     hike (1.2.3)
     http-cookie (1.0.2)
@@ -118,10 +117,6 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.3.0)
       addressable (~> 2.3)
-    linkedin (0.4.4)
-      hashie (>= 1.2, < 2.1)
-      multi_json (~> 1.0)
-      oauth (~> 0.4)
     linkedin-scraper (0.1.0)
       mechanize
     mail (2.5.4)
@@ -146,8 +141,8 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
-    oauth (0.4.7)
     orm_adapter (0.5.0)
+    pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -273,9 +268,9 @@ DEPENDENCIES
   jquery-rails
   kaminari
   launchy
-  linkedin
   linkedin-scraper
   nifty-generators
+  pg
   pry-debugger
   pry-rails
   railroady

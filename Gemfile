@@ -5,10 +5,11 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
+gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -25,7 +26,6 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'linkedin'
 gem 'binding_of_caller'
 gem 'compass'
 gem 'zurb-foundation', '~>4.0.0'
@@ -37,6 +37,7 @@ gem 'linkedin-scraper'
 
 group :development do
   gem 'better_errors'
+  gem 'sqlite3'
 end
 
 group :test, :development do
