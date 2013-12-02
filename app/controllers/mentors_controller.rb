@@ -2,13 +2,6 @@ class MentorsController < ApplicationController
 
   before_filter :authenticate_user!
 
-    @@config = {
-      :site => 'https://api.linkedin.com',
-      :authorize_path => '/uas/oauth/authenticate',
-      :request_token_path => '/uas/oauth/requestToken?scope=r_basicprofile+r_fullprofile+r_network+rw_nus',
-      :access_token_path => '/uas/oauth/accessToken'
-  }
-
   def index
     @mentors = Mentor.where(:active => true)
 
