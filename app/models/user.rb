@@ -15,4 +15,7 @@ class User < ActiveRecord::Base
 
   has_one :mentor, dependent: :delete
   has_one :student, dependent: :delete
+  has_one :basic_profile
+  has_one :full_profile
+  has_one :linkedin_oauth_setting
 end

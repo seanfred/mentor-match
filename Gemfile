@@ -26,6 +26,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'linkedin'
+gem 'binding_of_caller'
 gem 'compass'
 gem 'zurb-foundation', '~>4.0.0'
 gem 'fancybox-rails'

@@ -13,11 +13,58 @@
 
 ActiveRecord::Schema.define(:version => 20131129160848) do
 
+  create_table "basic_profiles", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "maiden_name"
+    t.string   "formatted_name"
+    t.string   "headline"
+    t.string   "location"
+    t.string   "industry"
+    t.string   "summary"
+    t.string   "specialties"
+    t.string   "picture_url"
+    t.string   "public_profile_url"
+    t.integer  "user_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "camps", :force => true do |t|
     t.integer  "student_id"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "educations", :force => true do |t|
+    t.string   "school_name"
+    t.string   "field_of_study"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "degree"
+    t.string   "activities"
+    t.string   "notes"
+    t.integer  "full_profile_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "full_profiles", :force => true do |t|
+    t.string   "associations"
+    t.string   "honors"
+    t.string   "interests"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "linkedin_oauth_settings", :force => true do |t|
+    t.string   "atoken"
+    t.string   "asecret"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "mentors", :force => true do |t|
@@ -35,6 +82,18 @@ ActiveRecord::Schema.define(:version => 20131129160848) do
     t.integer  "mentor_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "positions", :force => true do |t|
+    t.string   "title"
+    t.string   "summary"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "is_current"
+    t.string   "company"
+    t.integer  "full_profile_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "reviews", :force => true do |t|

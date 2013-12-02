@@ -1,5 +1,5 @@
 MentorMatch::Application.routes.draw do
-
+  root to: 'linkedin#index'
   resources :reviews
 
   resources :camps
@@ -28,7 +28,7 @@ MentorMatch::Application.routes.draw do
   match '/linkedin_profile' => "linkedin#linkedin_profile"
   match '/oauth_account' => "linkedin#oauth_account"
   match '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
-  root :to => 'linkedin#index'
+
 
 
 

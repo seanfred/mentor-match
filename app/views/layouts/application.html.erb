@@ -31,45 +31,9 @@
           <h1 id="headerTitle"> Mentor Match </h1>
       </div>
       <div class="large-4 columns right">
-        <% if user_signed_in? %>
-          <% if current_user.student || current_user.mentor %>
-            <% @user = current_user.student || current_user.mentor %>
-            <span class="welcomeText">
-              Welcome
-              <%= @user.personal_first_name.capitalize %> <%= @user.personal_last_name.capitalize %>!
-            </span>
-          <% end %>
-          <div id="settingsDiv" class: "right">
-            <%= link_to image_tag("/assets/admin-large.png", :alt => "Settings", :title => "Settings", :id => "settings", width: "30px", height: "auto", class: "settingsImage"), "#", id: "profileDropDown" %>
-            <div id="DropDown">
-                <% dashboard =  if current_user.student
-                                  students_path
-                                elsif current_user.mentor
-                                  mentors_path
-                                elsif current_user.admin
-                                  admin_users_path
-                                end %>
-                <%= link_to "Dashboard", dashboard, class: "profileLinks" %>
-                <% if current_user.mentor %>
-                  <%= link_to "Edit Your Profile", edit_mentor_path(@user), class: "profileLinks", remote: true %>
-                  <%= link_to "Delete Your Profile", mentor_path(@user),
-                            :confirm => "Are you sure you want to delete your profile?",
-                            :method => :delete, class: "profileLinks" %>
-                <% elsif current_user.student %>
-                  <%= link_to "Edit Your Profile", edit_student_path(@user), class: "profileLinks", remote: true  %>
-                  <%= link_to "Delete Your Profile", student_path(@user),
-                            :confirm => "Are you sure you want to delete your profile?",
-                            :method => :delete, class: "profileLinks" %>
-                <% end %>
-              <%= link_to "Edit Account", edit_user_registration_path(current_user), class: "profileLinks" %>
-              <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "profileLinks" %>
-            </div>
-          </div>
-        <% else %>
-          <div class="right">
-            <%= link_to image_tag("/assets/admin-large.png", :alt => "admin login", :title => "Login", :id => "login", width: "30px", height: "auto", class: "settingsImage"), new_user_session_path, "data-reveal-id" => "myModal" %>
-          </div>
-      <% end %>
+        <div class="container nav-collapse">
+
+        </div>
       </div>
     </header>
   </nav>
@@ -89,6 +53,9 @@
       <% end %>
 
       <%= yield %>
+
+
+
     </div>
   </div>
   <div id="push"></div>
