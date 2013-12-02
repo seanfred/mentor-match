@@ -15,6 +15,7 @@ def index
 
   def show
     @student = Student.find(params[:id])
+    @profile = Linkedin::Profile.get_profile("#{@student.profile}")
 
     respond_to do |format|
       format.html # show.html.erb

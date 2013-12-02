@@ -1,14 +1,47 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Student:</b>
-  <%= @student.name %>
+  <img src="<%= @profile.picture %>">
+</p>
+<p>
+
+<p>
+  <b>Mentor:</b>
+  <%= @profile.name%>
 </p>
 
 <p>
-  <b>LinkedIn:</b>
-  <%= @student.profile %>
+  <b><a href="<%= @profile.linkedin_url%>">LinkedIn</a></b>
 </p>
+
+  <b>Title</b>
+  <%= @profile.title %>
+</p>
+
+<p>
+  <b>Industry</b>
+  <%= @profile.industry %>
+</p>
+<p>
+  <b>Summary</b>
+  <%= @profile.summary %>
+</p>
+
+<p>
+  <b>Employment</b>
+  <%= @profile.current_companies %>
+  <%= @profile.past_companies %>
+</p>
+
+<p>
+  <b>Education</b>
+  <%= @profile.education %>
+</p>
+
+
+
+
+
 
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
