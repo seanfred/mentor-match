@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
+gem 'pg'
 
 
 # Gems used only for assets and not required
