@@ -20,5 +20,4 @@ The Admin User can:
 * Send notifications to students and mentors about matching process
 
 
-Mentor Match App was originally created by Anthony Zullo and Stephanie Hekker, Code Fellows 2013
 
