@@ -26,7 +26,6 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'linkedin'
 gem 'binding_of_caller'
 gem 'compass'
 gem 'zurb-foundation', '~>4.0.0'
@@ -34,12 +33,10 @@ gem 'fancybox-rails'
 gem 'simple_form'
 gem 'kaminari'
 gem 'nifty-generators'
-gem 'sunspot_rails'
 gem 'linkedin-scraper'
 
 group :development do
   gem 'better_errors'
-  gem 'sunspot_solr'
   gem 'sqlite3'
 end
 
