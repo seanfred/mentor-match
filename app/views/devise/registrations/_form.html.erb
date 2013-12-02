@@ -17,13 +17,6 @@
     <div class="row">
       <%= f.password_field :password_confirmation, :placeholder => "Confirm Password"  %>
     </div>
-      <div class="rolesnojs">
-        <%= f.label :role, "Which best describes your role at Code Fellows?" %><br />
-        Student
-        <%= f.radio_button :role, "student" %>
-        Mentor
-        <%= f.radio_button :role, "mentor" %>
-      </div>
       <div><%= f.submit "Sign up" %></div>
     <% end %>
 
