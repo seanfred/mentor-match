@@ -10,7 +10,7 @@ gem 'ranked-model'
 gem 'brakeman'
 gem 'railroady'
 gem 'pg'
-
+gem 'simplecov'
 
 # Gems used only for assets and not required
 # in production environments by default.
