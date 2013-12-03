@@ -38,6 +38,7 @@ gem 'simple_form'
 gem 'kaminari'
 gem 'nifty-generators'
 gem 'linkedin-scraper'
+gem 'mechanize'
 
 group :development do
   gem 'better_errors'

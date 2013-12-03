@@ -275,6 +275,7 @@ DEPENDENCIES
   kaminari
   launchy
   linkedin-scraper
+  mechanize
   nifty-generators
   pg
   pry-debugger
