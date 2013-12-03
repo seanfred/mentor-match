@@ -12,6 +12,10 @@ gem 'railroady'
 gem 'pg'
 gem 'simplecov'
 
+group :production do
+  gem 'pg'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
