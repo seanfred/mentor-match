@@ -3,6 +3,8 @@ class MentorshipsController < ApplicationController
   # GET /mentorships.json
   def index
     @mentorships = Mentorship.all
+    @students = Student.all
+    @mentors = Mentor.where(:active => true)
 
     respond_to do |format|
       format.html # index.html.erb

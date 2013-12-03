@@ -21,9 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :camp_id %><br />
-    <%= f.number_field :camp_id %>
+    <%= f.collection_select :camp_id, Camp.order(:description), :id, :description, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

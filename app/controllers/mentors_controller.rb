@@ -15,7 +15,7 @@ class MentorsController < ApplicationController
   def show
     @mentor = Mentor.find(params[:id])
     @profile = Linkedin::Profile.get_profile("#{@mentor.profile}")
-
+    @reviews = @mentor.reviews
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @mentor }
