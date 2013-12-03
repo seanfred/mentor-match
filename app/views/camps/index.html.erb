@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Student</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -11,7 +10,6 @@
 
 <% @camps.each do |camp| %>
   <tr>
-    <td><%= camp.student_id %></td>
     <td><%= camp.description %></td>
     <td><%= link_to 'Show', camp %></td>
     <td><%= link_to 'Edit', edit_camp_path(camp) %></td>

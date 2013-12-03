@@ -4,7 +4,7 @@
   <tr>
     <th>Mentor</th>
     <th>Open Spots</th>
-    <th></th>
+    <th>LinkedIn</th>
     <th></th>
   </tr>
 
@@ -12,6 +12,7 @@
   <tr>
     <td><%= mentor.name %></td>
     <td><center><%= mentor.capacity %></center></td>
+    <td><a href="<%= mentor.profile %>" target="_blank"><%= mentor.profile %></a></td>
     <td><%= link_to 'Show', mentor %></td>
     <td><%= link_to 'Edit', edit_mentor_path(mentor) %></td>
     <td><%= link_to 'Destroy', mentor, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -14,6 +14,7 @@ class CampsController < ApplicationController
   # GET /camps/1.json
   def show
     @camp = Camp.find(params[:id])
+    @students = Student.all
 
     respond_to do |format|
       format.html # show.html.erb
