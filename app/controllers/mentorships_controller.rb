@@ -46,7 +46,7 @@ class MentorshipsController < ApplicationController
 
     respond_to do |format|
       if @mentorship.save
-        format.html { redirect_to @mentorship, notice: 'Mentorship was successfully created.' }
+        format.html { redirect_to mentorships_url, notice: 'Mentorship was successfully created.' }
         format.json { render json: @mentorship, status: :created, location: @mentorship }
       else
         format.html { render action: "new" }

@@ -9,12 +9,12 @@
     <th></th>
   </tr>
 
-<% @mentorships.each do |mentorship| %>
+  <% @mentorships.each do |mentorship| %>
   <% @students.each do |student| %>
   <% @mentors.each do |mentor| %>
   <tr>
-    <td><%= mentorship.student_id %><%= student.name %></td>
-    <td><%= mentorship.mentor_id %><%= mentor.name %></td>
+    <td><%= student.name %></td>
+    <td><%= mentor.name %></td>
     <td><%= link_to 'Show', mentorship %></td>
     <td><%= link_to 'Edit', edit_mentorship_path(mentorship) %></td>
     <td><%= link_to 'Destroy', mentorship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
