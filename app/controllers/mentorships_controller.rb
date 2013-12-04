@@ -2,7 +2,7 @@ class MentorshipsController < ApplicationController
   # GET /mentorships
   # GET /mentorships.json
   def index
-    @mentorships = Mentorship.all
+    @mentorships = Mentorship.includes(:student, :mentor)
 
     respond_to do |format|
       format.html # index.html.erb
