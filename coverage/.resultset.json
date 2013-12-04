@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/administrator/rails/mentor-match/spec/support/authentication_helpers.rb": [
+      "/Users/sean/mentor-match/spec/support/authentication_helpers.rb": [
         1,
         1,
         0,
@@ -16,7 +16,7 @@
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/support/factories/admin_factory.rb": [
+      "/Users/sean/mentor-match/spec/support/factories/admin_factory.rb": [
         1,
         1,
         1,
@@ -43,7 +43,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/support/factories/mentor_factory.rb": [
+      "/Users/sean/mentor-match/spec/support/factories/mentor_factory.rb": [
         1,
         1,
         1,
@@ -54,7 +54,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/support/factories/student_factory.rb": [
+      "/Users/sean/mentor-match/spec/support/factories/student_factory.rb": [
         1,
         1,
         1,
@@ -62,7 +62,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/support/helper.rb": [
+      "/Users/sean/mentor-match/spec/support/helper.rb": [
         1,
         null,
         1,
@@ -94,7 +94,7 @@
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/helpers/linkedin_helper_spec.rb": [
+      "/Users/sean/mentor-match/spec/helpers/linkedin_helper_spec.rb": [
         1,
         null,
         null,
@@ -111,7 +111,7 @@
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/helpers/mentorships_helper_spec.rb": [
+      "/Users/sean/mentor-match/spec/helpers/mentorships_helper_spec.rb": [
         1,
         null,
         null,
@@ -128,7 +128,7 @@
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/helpers/reviews_helper_spec.rb": [
+      "/Users/sean/mentor-match/spec/helpers/reviews_helper_spec.rb": [
         1,
         null,
         null,
@@ -145,7 +145,7 @@
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/admin_pairing_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/admin_pairing_spec.rb": [
         1,
         null,
         1,
@@ -176,7 +176,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/admin_send_notifications_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/admin_send_notifications_spec.rb": [
         1,
         null,
         1,
@@ -214,7 +214,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/login_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/login_spec.rb": [
         1,
         null,
         1,
@@ -253,7 +253,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/mentor_add_profile_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/mentor_add_profile_spec.rb": [
         1,
         null,
         1,
@@ -314,7 +314,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/mentor_delete_profile_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/mentor_delete_profile_spec.rb": [
         1,
         null,
         1,
@@ -339,7 +339,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/mentor_edit_profile_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/mentor_edit_profile_spec.rb": [
         1,
         null,
         1,
@@ -418,7 +418,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/mentor_rates_students_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/mentor_rates_students_spec.rb": [
         1,
         null,
         1,
@@ -444,7 +444,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/student_add_mentor_review_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/student_add_mentor_review_spec.rb": [
         null,
         null,
         null,
@@ -467,7 +467,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/student_add_survey_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/student_add_survey_spec.rb": [
         1,
         null,
         1,
@@ -475,97 +475,6 @@
         null,
         1,
         0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/integration/student_edit_survey_spec.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null,
         null,
@@ -639,7 +548,98 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/integration/student_rates_mentors_spec.rb": [
+      "/Users/sean/mentor-match/spec/integration/student_edit_survey_spec.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/integration/student_rates_mentors_spec.rb": [
         1,
         null,
         1,
@@ -665,28 +665,28 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/models/camp_spec.rb": [
+      "/Users/sean/mentor-match/spec/models/camp_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/models/mentorship_spec.rb": [
+      "/Users/sean/mentor-match/spec/models/mentorship_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/models/review_spec.rb": [
+      "/Users/sean/mentor-match/spec/models/review_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/requests/camps_spec.rb": [
+      "/Users/sean/mentor-match/spec/requests/camps_spec.rb": [
         1,
         null,
         1,
@@ -699,7 +699,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/requests/mentorships_spec.rb": [
+      "/Users/sean/mentor-match/spec/requests/mentorships_spec.rb": [
         1,
         null,
         1,
@@ -712,7 +712,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/requests/reviews_spec.rb": [
+      "/Users/sean/mentor-match/spec/requests/reviews_spec.rb": [
         1,
         null,
         1,
@@ -725,44 +725,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/routing/camps_routing_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/routing/mentorships_routing_spec.rb": [
+      "/Users/sean/mentor-match/spec/routing/camps_routing_spec.rb": [
         1,
         null,
         1,
@@ -799,7 +762,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/routing/reviews_routing_spec.rb": [
+      "/Users/sean/mentor-match/spec/routing/mentorships_routing_spec.rb": [
         1,
         null,
         1,
@@ -836,7 +799,44 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/camps/edit.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/routing/reviews_routing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/camps/edit.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -858,95 +858,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/camps/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/camps/new.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/camps/show.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/mentorships/edit.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/mentorships/index.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/views/camps/index.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -971,7 +883,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/mentorships/new.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/views/camps/new.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -993,7 +905,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/mentorships/show.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/views/camps/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1012,54 +924,7 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/reviews/edit.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/reviews/index.html.erb_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/administrator/rails/mentor-match/spec/views/reviews/new.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/views/mentorships/edit.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1081,7 +946,142 @@
         null,
         null
       ],
-      "/Users/administrator/rails/mentor-match/spec/views/reviews/show.html.erb_spec.rb": [
+      "/Users/sean/mentor-match/spec/views/mentorships/index.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/mentorships/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/mentorships/show.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/reviews/edit.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/reviews/index.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/reviews/new.html.erb_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/sean/mentor-match/spec/views/reviews/show.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1101,6 +1101,6 @@
         null
       ]
     },
-    "timestamp": 1386180240
+    "timestamp": 1386182936
   }
 }
