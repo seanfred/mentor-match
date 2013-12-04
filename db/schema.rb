@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131203053147) do
+ActiveRecord::Schema.define(:version => 20131204042258) do
 
   create_table "basic_profiles", :force => true do |t|
     t.string   "first_name"
@@ -72,9 +72,10 @@ ActiveRecord::Schema.define(:version => 20131203053147) do
     t.string   "profile"
     t.boolean  "active"
     t.integer  "capacity"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "user_id"
+    t.integer  "mentorship_id"
   end
 
   create_table "mentorships", :force => true do |t|
@@ -108,9 +109,10 @@ ActiveRecord::Schema.define(:version => 20131203053147) do
     t.integer  "camp_id"
     t.string   "name"
     t.string   "profile"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "user_id"
+    t.integer  "mentorship_id"
   end
 
   create_table "users", :force => true do |t|
