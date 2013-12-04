@@ -1,9 +1,6 @@
-
-
 <p>
   <img src="<%= @profile.picture %>">
 </p>
-<p>
 
 <p>
   <b>Mentor:</b>
@@ -44,6 +41,12 @@
 <p>
   <b>Active:</b>
   <%= @mentor.active %>
+</p>
+
+<p>
+  <h2>Reviews</h2>
+    <%= render "reviews/revi" %>
+    <%= render "reviews/form" %>
 </p>
 
 
