@@ -11,10 +11,9 @@
 
   <% @mentorships.each do |mentorship| %>
 
-  <% mentorship.students.zip(mentorship.mentors).each do |student, mentor| %>
   <tr>
-    <td><%= mentorship.student.name %></td>
-    <td><%= mentorship.mentor.name %></td>
+    <td><%= mentorship.student_id %></td>
+    <td><%= mentorship.mentor_id %></td>
     <td><%= link_to 'Show', mentorship %></td>
     <td><%= link_to 'Edit', edit_mentorship_path(mentorship) %></td>
     <td><%= link_to 'Destroy', mentorship, method: :delete, data: { confirm: 'Are you sure?' } %></td>

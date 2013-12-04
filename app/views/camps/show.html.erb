@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Student:</b>
-  <%= @camp.student_id %>
-</p>
 
 <p>
-  <b>Description:</b>
+  <b>Bootcamp:</b>
   <%= @camp.description %>
 </p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>LinkedIn</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @camp.students.each do |student| %>
+  <tr>
+    <td><%= student.name %></td>
+    <td><a href="<%= student.profile %>" target="_blank"><%= student.profile %></a></td>
+  </tr>
+<% end %>
+</table>
 
 
 <%= link_to 'Edit', edit_camp_path(@camp) %> |

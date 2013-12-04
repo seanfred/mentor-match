@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Student</th>
-    <th></th>
+    <th>LinkedIn</th>
     <th></th>
     <th></th>
   </tr>
@@ -11,7 +11,7 @@
 <% @students.each do |student| %>
   <tr>
     <td><%= student.name %></td>
-    <td><%= student.profile %></td>
+    <td><a href="<%= student.profile %>" target="_blank"><%= student.profile %></a></td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
