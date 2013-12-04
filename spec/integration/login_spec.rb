@@ -12,26 +12,26 @@ feature "A user logs into the system" do
 		click_link "login"
 	end
 
-	scenario "A student logs into their dashboard" do
-		fill "Email", student.user.email
-		fill "Password", student.user.password
-		click_button "Sign in"
-		content "Welcome " + student.personal_first_name
-		content "Mentor Profiles"
-	end
+	# scenario "A student logs into their dashboard" do
+	# 	fill "Email", student.user.email
+	# 	fill "Password", student.user.password
+	# 	click_button "Sign in"
+	# 	content "Welcome " + student.personal_first_name
+	# 	content "Mentor Profiles"
+	# end
 
-	scenario "A mentor logs into their dashboard" do
-		fill "Email", mentor.user.email
-		fill "Password", mentor.user.password
-		click_button "Sign in"
-		content "Welcome " + mentor.personal_first_name
-		content "View Mentee Profiles"
-	end
+	# scenario "A mentor logs into their dashboard" do
+	# 	fill "Email", mentor.user.email
+	# 	fill "Password", mentor.user.password
+	# 	click_button "Sign in"
+	# 	content "Welcome " + mentor.personal_first_name
+	# 	content "View Mentee Profiles"
+	# end
 
-	scenario "Admin logs into dashboard" do
-		fill 'Email', admin.email
-		fill 'Password', admin.password
-		click_button "Sign in"
-		content "Signed in successfully."
-	end
+	# scenario "Admin logs into dashboard" do
+	# 	fill 'Email', admin.email
+	# 	fill 'Password', admin.password
+	# 	click_button "Sign in"
+	# 	content "Signed in successfully."
+	# end
 end

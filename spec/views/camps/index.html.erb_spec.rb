@@ -4,11 +4,11 @@ describe "camps/index" do
   before(:each) do
     assign(:camps, [
       stub_model(Camp,
-        :student_id => 1,
+
         :description => "Description"
       ),
       stub_model(Camp,
-        :student_id => 1,
+
         :description => "Description"
       )
     ])
