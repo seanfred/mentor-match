@@ -46,7 +46,11 @@
   <%= @mentor.active %>
 </p>
 
-
+<p>
+<h2> Reviews</h2>
+  <%= render "reviews/revi" %>
+  <%= render "reviews/form" %>
+</p>
 
 <%= link_to 'Edit', edit_mentor_path(@mentor) %> |
 <%= link_to 'Back', mentors_path %>
