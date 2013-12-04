@@ -3,8 +3,7 @@ class MentorshipsController < ApplicationController
   # GET /mentorships.json
   def index
     @mentorships = Mentorship.all
-    @students = Student.all
-    @mentors = Mentor.where(:active => true)
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +15,8 @@ class MentorshipsController < ApplicationController
   # GET /mentorships/1.json
   def show
     @mentorship = Mentorship.find(params[:id])
+    @students = Student.all
+    @mentors = Mentor.all
 
     respond_to do |format|
       format.html # show.html.erb

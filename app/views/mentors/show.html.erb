@@ -4,9 +4,6 @@
   <img src="<%= @profile.picture %>">
 </p>
 <p>
-<p>
-  <b><a href="<%= @profile.linkedin_url%>">LinkedIn</a></b>
-</p>
 
 <p>
   <b>Mentor:</b>
@@ -29,13 +26,13 @@
 
 <p>
   <b>Employment</b>
-  <%= @profile.current_companies %>
+  <%= @profile.current_companies{0} %>
   <%= @employment %>
 </p>
 
 <p>
   <b>Education</b>
-  <%= @profile.education %>
+  <%= @profile.education{0} %>
 </p>
 
 
