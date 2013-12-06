@@ -6,7 +6,7 @@ By [Michael Frankenfield](http://www.mfrank.io)
 ## About
 The Mentor Match Application was created for use to link CodeFellows Students with Seattle Tech Industry Professionals to gain career advice and expand their network in the programming world.
 
-This application was created using Ruby on Rails, [other tools go here]. There are 3 intended users of this tool: the Student, the Mentor and the Admin.
+This application was created using Ruby on Rails, Zurb.
 
 # The Student User can:
 * Create a student profile derived from scraping their LinkedIn profile.
