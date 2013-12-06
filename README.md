@@ -1,23 +1,38 @@
-Mentor Match App v1.0
+# Mentor Match App v2.0
 
-About
+By [Sean Frederick](sean.frederick.1@gmail.com)
+By [Michael Frankenfield](http://www.mfrank.io)
+
+## About
 The Mentor Match Application was created for use to link CodeFellows Students with Seattle Tech Industry Professionals to gain career advice and expand their network in the programming world.
 
 This application was created using Ruby on Rails, [other tools go here]. There are 3 intended users of this tool: the Student, the Mentor and the Admin.
 
-The Student User can:
-* Submit a survey of questions about themselves, their career experience and aspirations and their mentorship goals.
-* Submit a Follow-up mentor program survey once the course is officially complete
+# The Student User can:
+* Create a student profile derived from scraping their LinkedIn profile.
+* Reserve a mentor from the mentor database and create a mentorship.
 
-The Mentor User can:
-* Create a profile of their career experience
-* Review anonymous student surveys (hiding student names)
+# The Admin User can:
+* Create a camp for a group of students.
+* Review mentorships database.
 
-The Admin User can:
-* Review the full mentor profile
-* Review the full student survey
-* Pair the students and mentors
-* Send notifications to students and mentors about matching process
+## Screenshots
+![Day2 Static_Home](gshots/screen1.png)
+
+![Day2 Static_Home](gshots/screen2.png)
+
+## Contributing
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+
+## License
+Your Licensing Information goes here. Example: MIT/X11.
+
+
 
 
 
